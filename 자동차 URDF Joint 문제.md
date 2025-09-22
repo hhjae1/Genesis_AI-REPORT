@@ -8,7 +8,8 @@
 
 ## 1. 축 불일치 문제
 
-```<origin rpy="1.57 0 0">``` 때문에 cylinder(바퀴)가 위 그림과 같이 됨 -> 이 경우 cylinder의 회전축은 X축이 됨. * rpy = "roll pitch yaw" , 1.57은 radius로 약 x 축으로 90도 회전됨.
+```<origin rpy="1.57 0 0">``` 때문에 cylinder(바퀴)가 위 그림과 같이 됨 -> 이 경우 cylinder의 회전축은 X축이 됨. 
+> rpy = "roll pitch yaw" , 1.57은 radius로 약 x 축으로 90도 회전됨.
 
 하지만 joint에서는 <axis xyz="0 0 1"/> Z축을 지정하여 ink의 실제 기하학 축과 joint 축이 안 맞아서 제약이 무시됨.
 
