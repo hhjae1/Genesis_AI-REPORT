@@ -80,7 +80,7 @@ Actor 네트워크는 위 그림과 같이 MLP(Multi-Layer Perception)구조로 
 2. Hidden Layer 1,2 (은닉층)
 - 드론 Actor 네트워크는 두 개의 은닉층을 가짐
 - 각 뉴런은 다음과 같이 계산됨  
-  z = Σᵢ (wᵢ·xᵢ) + bgit commit -m "Update reward function doc with Unicode equations"
+  z = Σᵢ (wᵢ·xᵢ) + b
   
 여기서 가중치 w는 입력 특징의 영향력을 조절하고, 편향 b는 입력이 0일 때도 안정적으로 동작하기 위해 뉴런이 일정 출력(기본값)을 내도록 해줌.  
 - 각 은닉층에는 128개의 뉴런이 있고, 활성화 함수로 `tanh` 사용 
