@@ -162,6 +162,6 @@
 
 ## 데모 영상
 
-![수정 전후 비교](https://github.com/hhjae1/Genesis_AI-REPORT/issues/1#issue-3635779700)
+[![수정 전후 비교(./res/collision 해결)]](https://github.com/hhjae1/Genesis_AI-REPORT/issues/1#issue-3635779700)
 
 *차체 collision을 mesh에서 box로 변경 후 정상 작동하는 모습*
