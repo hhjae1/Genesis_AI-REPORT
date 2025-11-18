@@ -165,4 +165,3 @@
 https://github.com/user-attachments/assets/3c421729-767d-43b1-9095-4ddff0b613bb
 
 *차체 collision을 mesh에서 box로 변경 후 정상 작동하는 모습*
-g
