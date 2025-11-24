@@ -2,12 +2,11 @@
 
 ## 1️. Blender 데이터 수집
 
-### 수집되는 데이터
-
-
 https://github.com/user-attachments/assets/ae59b44d-aa61-4658-b216-20b1203af106
 
+**직진하는 데이터**
 
+### 수집되는 데이터
 
 **상태 정보 (State):**
 - `g_pos_x, g_pos_y, g_pos_z`: 차량 위치 (Genesis 좌표계, m)
@@ -99,7 +98,7 @@ vel_B(t) = [pos_B(t) - pos_B(t-1)] / Δt
 
 ![alt text](images/MLP구조.gif)
 
-** 6 -> 64 -> 64 -> 2
+**6 -> 64 -> 64 -> 2**
 
 ###  전체 구조 개요
 ```
