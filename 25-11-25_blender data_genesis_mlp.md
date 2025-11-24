@@ -4,7 +4,7 @@
 
 https://github.com/user-attachments/assets/ae59b44d-aa61-4658-b216-20b1203af106
 
-**직진하는 데이터**
+**직진하는 데이터(완벽히 직진하지는 않음)**
 
 ### 수집되는 데이터
 
@@ -401,6 +401,7 @@ NN Output = [steer_cmd, torque]
 https://github.com/user-attachments/assets/0a5b65bc-2a51-4996-a6c2-baf7048e2317
 
 
+- steer_cmd가 0.001 ~ 0.005 사이로 거의 완벽히 직진(블렌더 데이터에서도 완벽히 직진하지는 않음)
 
 ## Genesis vs Blender 속도 비교
 
