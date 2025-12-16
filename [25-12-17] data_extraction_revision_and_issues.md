@@ -4,7 +4,7 @@
 
 https://github.com/user-attachments/assets/4f5e528d-7825-4a63-90e7-c36d1db0c758
 
-![alt text](images/data.path.png)
+![alt text](images/data_path.png)
 
 데이터를 뽑은 blender 영상과 그 뽑은 데이터를 통해 경로를 그린 결과가 매우 유사하였음  
 `-> 데이터 추출은 문제가 없다 판단. `
