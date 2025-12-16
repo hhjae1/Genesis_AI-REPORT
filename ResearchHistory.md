@@ -11,10 +11,10 @@ Genesis 드론 URDF 파일 구조 및 설정에 대한 분석
 #### [[25-09-22] drone_physics.md]([25-09-22]%20drone_physics.md)
 Genesis 드론 물리 시뮬레이션 원리 및 구현 방법 정리
 
-#### [[25-09-25] drone_principle - 2022204047 허재원.md]([25-09-25]%20drone_principle%20-%202022204047%20허재원.md)
+#### [[25-09-25] drone_principle.md]([25-09-25]%20drone_principle%20-%202022204047%20허재원.md)
 Genesis 드론의 기본 동작 원리 및 제어 메커니즘 분석
 
-#### [[25-09-30] drone_mlp and reward - 2022204047 허재원.md]([25-09-30]%20drone_mlp%20and%20reward%20-%202022204047%20허재원.md)
+#### [[25-09-30] drone_mlp and reward]([25-09-30]%20drone_mlp%20and%20reward%20-%202022204047%20허재원.md)
 Genesis 드론의 MLP 네트워크 구조 및 강화학습 보상 함수 설계 분석
 
 ---
