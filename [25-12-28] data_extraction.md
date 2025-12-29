@@ -206,7 +206,7 @@ throttle = np.clip(throttle, -1, 1)
 
 ---
 
-## Genesis Calibration
+## 4. Genesis Calibration
 
 ### Calibration의 필요성
 
