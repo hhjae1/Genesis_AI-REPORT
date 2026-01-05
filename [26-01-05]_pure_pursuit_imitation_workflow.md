@@ -36,7 +36,8 @@
 ## 3. MLP 입출력 설계 (Input/Output Design)
 
 #### 1.  Input Parameters (MLP가 보는 것)
-- **Speed**: 현재 차량의 속력
+- **Speed**: 현재 차량의 속력  
+
   ![alt text](images/speed.png)
 - **Target Local X** (전방 거리): 내 차 기준, 목표점이 앞뒤로 어디 있는가?
 - **Target Local Y** (측면 거리): 내 차 기준, 목표점이 좌우로 어디 있는가?
