@@ -37,7 +37,7 @@
 
 #### 1.  Input Parameters (MLP가 보는 것)
 - **Speed**: 현재 차량의 속력
-  - 소스: $\sqrt{\text{g\_lin\_vx}^2 + \text{g\_lin\_vy}^2}$ (csv의 속도 벡터 크기 계산)
+  ![alt text](images/speed.png)
 - **Target Local X** (전방 거리): 내 차 기준, 목표점이 앞뒤로 어디 있는가?
 - **Target Local Y** (측면 거리): 내 차 기준, 목표점이 좌우로 어디 있는가?
   - **계산 방법**:
