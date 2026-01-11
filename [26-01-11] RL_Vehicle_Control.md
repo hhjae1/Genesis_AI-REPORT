@@ -15,6 +15,8 @@ Genesis의 드론 예제를 기반으로 코드를 구조화:
 - **car_train_fixed.py**: 학습 스크립트 (OnPolicyRunner + PPO) -> ``MLP 구성 + 보상 가중치``
 - **car_eval_fixed.py**: 평가 스크립트 (시각화 + CSV 저장)
 
+![alt text](images/target_system.jpg)
+
 ### 2. 목표 타겟 시스템
 Pure Pursuit 알고리즘과 유사한 방식으로 타겟을 설정:
 - **sensor_log.csv에서 250개 경로 포인트 로드**
