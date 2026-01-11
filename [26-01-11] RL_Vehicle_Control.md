@@ -239,10 +239,10 @@ penalty = -|steer_action|
 
 
 ## ``lookahead = 20``
-<video controls src="../Genesis_AI-REPORT/res/lookahead_20.mp4" title="Title"></video>
+<video controls src="../res/lookahead_20.mp4" title="Title"></video>
 
 ## ``lookahead = 5``
-<video controls src="../Genesis_AI-REPORT/res/lookahead_5.mp4" title="Title"></video>
+<video controls src="../res/lookahead_5.mp4" title="Title"></video>
 
 ### 문제 원인 상세 분석
 
