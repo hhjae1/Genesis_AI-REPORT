@@ -240,11 +240,11 @@ https://github.com/user-attachments/assets/dd35077a-38db-419b-8042-90946347b02e
 
 ``Scripting에 들어가 데이터 추출 코드를 직접 작성한 후 실행하여 추출``
 
-**[[26-01-11] RL_Vehicle_Control](https://github.com/hhjae1/Genesis_AI-REPORT/blob/main/%5B26-01-11%5D%20RL_Vehicle_Control.md)**
+-> **[blender_data 추출 코드](https://github.com/hhjae1/Genesis_AI-REPORT/blob/main/res/blender_data_extraction.py)**
 
 
 ---
 
 ## 5. Genesis 학습 방법
 
-위에서 추출한 데이터를 **[[26-01-11] RL_Vehicle_Control](https://github.com/hhjae1/Genesis_AI-REPORT/blob/main/%5B26-01-11%5D%20RL_Vehicle_Control.md)**에서와 같이 ``mlp에 입력값으로 넣어 학습``
+위에서 추출한 데이터를 **[[26-01-11] RL_Vehicle_Control](https://github.com/hhjae1/Genesis_AI-REPORT/blob/main/%5B26-01-11%5D%20RL_Vehicle_Control.md)** 에서와 같이 ``mlp에 입력값으로 넣어 학습``
