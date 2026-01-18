@@ -146,3 +146,15 @@ time_penalty = -1.0  # 매 스텝마다 부과
 
 https://github.com/user-attachments/assets/79201243-f97e-4189-91cc-a570f96b42e7
 
+### 경로 추종 정확도 (Tracking Accuracy)
+
+- 차량이 목표 경로(Reference Path)를 얼마나 잘 따라갔는지 나타내는 지표입니다.
+
+| 지표 (Metric) | 초기값 (Step 0) | 피크값 (Max) | 종료값 (Step 1010) | 분석 |
+| :--- | :---: | :---: | :---: | :--- |
+| **Track Error** | 0.00 | 0.56 (Step 640-660) | 0.08 | 전체적으로 0.5 미만 유지, 안정적임 |
+| **CTE** (횡방향 오차) | 0.00 | 1.30 (Step 680) | 0.21 | 중반부 곡선 구간 추정됨, 이후 0.2로 수렴하며 복구 성공 |
+| **Target Index** | 2 | 249 | 249 | 전체 경로(250 segments)의 99.6% 완주 |
+
+
+
