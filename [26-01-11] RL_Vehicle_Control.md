@@ -169,8 +169,8 @@ actual_torque = action[0] * max_torque  # max_torque = 3000 N·m
 
 ## 보상 함수 (Reward Function)
 
-PPO에서는 보상 함수가 손실 함수(loss)의 기반이 됩니다.
-보상을 최대화하는 방향으로 정책이 학습됩니다.
+PPO에서는 보상 함수가 손실 함수(loss)의 기반
+보상을 최대화하는 방향으로 정책이 학습됨.
 
 ### 총 보상 계산
 
