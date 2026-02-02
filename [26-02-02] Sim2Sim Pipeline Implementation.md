@@ -30,7 +30,7 @@ Genesis 물리 엔진 내에서 Blender의 궤적을 완벽하게 재현할 수 
   
   1. **Warm-start (Prior)**: Pure Feedforward 값을 평균($\mu$)으로 설정.
      * $T_{init} = a^B / 3.0$
-     * $S_{init} = \kappa^B \cdot 2.8$
+     * $S_{init} = \kappa^B \cdot 2.5$
   2. **Sampling**: 초기 추정치 주변에서 Gaussian Noise를 추가하여 **200개의 병렬 샘플** 생성.
      * $T_{sample} \sim \mathcal{N}(T_{init}, 0.15^2)$
      * $S_{sample} \sim \mathcal{N}(S_{init}, 0.08^2)$
