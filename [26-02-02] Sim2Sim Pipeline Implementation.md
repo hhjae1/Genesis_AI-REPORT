@@ -22,9 +22,9 @@
 ## Step 2: Golden Input Mining
 **Offline Black-Box Optimization via MPPI**
 
-[cite_start]Genesis 물리 엔진 내에서 Blender의 궤적을 완벽하게 재현할 수 있는 **"최적의 입력(Golden Input)"**을 역으로 찾아내는 과정입니다[cite: 118, 126]. 단순 탐색 대신 **MPPI (Model Predictive Path Integral)** 알고리즘을 사용하여 최적의 해를 효율적으로 탐색했습니다.
+Genesis 물리 엔진 내에서 Blender의 궤적을 완벽하게 재현할 수 있는 **"최적의 입력(Golden Input)"** 을 역으로 찾아내는 과정입니다. 단순 탐색 대신 **MPPI (Model Predictive Path Integral)** 알고리즘을 사용하여 최적의 해를 효율적으로 탐색했습니다.
 
-* [cite_start]**Problem**: Genesis의 물리 특성(마찰, 질량 등)이 다르기 때문에, 분석적인 역함수 $f^{-1}$를 구할 수 없습니다[cite: 81].
+* **Problem**: Genesis의 물리 특성(마찰, 질량 등)이 다르기 때문에, 분석적인 역함수 $f^{-1}$를 구할 수 없습니다.
 * **Method: MPPI Sampling-based Optimization**
   매 프레임 **State Reset**을 적용하여 독립적인 최적화를 수행했습니다.
   
