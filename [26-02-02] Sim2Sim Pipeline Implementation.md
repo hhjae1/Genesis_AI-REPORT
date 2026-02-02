@@ -20,17 +20,25 @@
 ---
 
 ## Step 2: Golden Input Mining
-**Offline Black-Box Optimization**
+**Offline Black-Box Optimization via MPPI**
 
-Genesis 물리 엔진 내에서 Blender의 궤적을 완벽하게 재현할 수 있는 **"최적의 입력(Golden Input)"** 을 역으로 찾아내는 과정입니다.
+[cite_start]Genesis 물리 엔진 내에서 Blender의 궤적을 완벽하게 재현할 수 있는 **"최적의 입력(Golden Input)"**을 역으로 찾아내는 과정입니다[cite: 118, 126]. 단순 탐색 대신 **MPPI (Model Predictive Path Integral)** 알고리즘을 사용하여 최적의 해를 효율적으로 탐색했습니다.
 
-* **Problem**: Genesis의 물리 특성(마찰, 질량, 서스펜션 등)이 Blender와 다르기 때문에, 분석적인 역함수 $f^{-1}$를 구할 수 없습니다.
-* **Method**: Genesis를 블랙박스로 가정하고 Grid Search 기반의 반복 시뮬레이션을 수행했습니다. 
-  * 매 프레임마다 **State Reset**을 적용하여 에러 누적을 방지하고, 순수한 물리 매핑 데이터를 확보했습니다.
-* **Equation (Loss Function)**:
-  다음 수식을 최소화하는 최적 입력 $(T^{\ast}, S^{\ast})$를 탐색합니다.
+* [cite_start]**Problem**: Genesis의 물리 특성(마찰, 질량 등)이 다르기 때문에, 분석적인 역함수 $f^{-1}$를 구할 수 없습니다[cite: 81].
+* **Method: MPPI Sampling-based Optimization**
+  매 프레임 **State Reset**을 적용하여 독립적인 최적화를 수행했습니다.
   
- $$(T^{\ast}, S^{\ast}) = \underset{T,S}{\mathrm{argmin}} \left( |a^G(T,S) - a^B| + |\kappa^G(T,S) - \kappa^B| \right)$$
+  1. **Warm-start (Prior)**: Pure Feedforward 값을 평균($\mu$)으로 설정.
+     * $T_{init} = a^B / 3.0$
+     * $S_{init} = \kappa^B \cdot 2.8$
+  2. **Sampling**: 초기 추정치 주변에서 Gaussian Noise를 추가하여 **200개의 병렬 샘플** 생성.
+     * $T_{sample} \sim \mathcal{N}(T_{init}, 0.15^2)$
+     * $S_{sample} \sim \mathcal{N}(S_{init}, 0.08^2)$
+  3. **Evaluation**: Genesis 병렬 환경에서 시뮬레이션 후 Cost 계산.
+     * $Cost = 1.0 \cdot |a^G - a^B| + 10.0 \cdot |\kappa^G - \kappa^B|$
+  4. **Aggregation**: Cost에 기반한 Softmax 가중 평균으로 최적 입력 도출.
+     * $w = \exp(-Cost / \lambda), \quad \lambda=0.1$
+     * $(T^{\ast}, S^{\ast}) = \sum (w \cdot u_{samples}) / \sum w$
 
 * **Output**: `golden_inputs.csv`
   * Genesis 환경에서 Blender와 동일한 움직임을 만들어내는 정답 제어 입력 데이터셋 생성.
