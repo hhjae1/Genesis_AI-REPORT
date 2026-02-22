@@ -33,6 +33,11 @@ $$Loss = \frac{1}{N} \sum \left( (u_{\text{throttle}}^{\text{BC}} - u_{\text{thr
 
 https://github.com/user-attachments/assets/cbd52cd4-4c4c-4305-bfe7-db0dc7e70303
 
+
+  - Blue(파란색)  = Blender 원본 경로
+  - Green(초록색) = MPPI 최적화 결과 경로 (golden_inputs_optimized.csv)
+  - Red(빨간색)   = BC 모델 주행 경로
+
 ### 3.1 정량적 성능 지표 (MPPI vs BC)
 
 | 평가지표 | MPPI (Teacher) | BC (Student) | 분석 |
