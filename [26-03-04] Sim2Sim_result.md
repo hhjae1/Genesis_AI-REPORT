@@ -94,6 +94,8 @@ https://github.com/user-attachments/assets/97c0d3b0-a7ca-4e89-917c-1b67026d4d4f
 | Mean Drift | 1.31 m |
 | Max Drift | 10.08 m |
 
+>최적화한 전체 경로에서 공통적으로 후반 부분의 감속 제어 문제가 있음. -> **RL** 이나 **MPPI에서 horizon**을 늘려 해결할 수 있을 것으로 보임.
+
 ---
 
 ## Step 2. BC 학습 및 새로운 경로 일반화
