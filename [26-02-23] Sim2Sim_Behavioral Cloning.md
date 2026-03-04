@@ -31,7 +31,7 @@
 | **8~17** | `kappa_lookahead` × 10 | Blender CSV (kappa 미래 10프레임) |
 | **18~27** | `v_lookahead` × 10 | Blender CSV (v_smooth 미래 10프레임) |
 
----
+
 
 ### 2.1.2 추론 시 (Inference / Rollout)
 
