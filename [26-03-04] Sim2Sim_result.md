@@ -44,7 +44,7 @@ https://github.com/user-attachments/assets/8c307023-96b9-4ad0-b2f9-db269022ffbe
 
 <!-- 영상: golden_sharp_right.csv 기반 MPPI 주행 -->
 
-(https://github.com/user-attachments/assets/d59d8bdb-914e-43a8-a00c-f6f8fe83a3bc)
+https://github.com/user-attachments/assets/d59d8bdb-914e-43a8-a00c-f6f8fe83a3bc
 
 | 항목 | 값 |
 |------|-----|
