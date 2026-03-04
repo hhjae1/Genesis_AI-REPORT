@@ -17,6 +17,42 @@
 | **Dynamics (현재 상태)** | `v_current`, `kappa_current`, `prev_throttle`, `prev_steer` | 4 | 현재 차량의 동역학적 관성 및 직전 제어값. 제어의 연속성(Smoothness) 보장. |
 | **Lookahead (미래 예측)** | `kappa_target[t+1:t+10]`, `v_target[t+1:t+10]` | 20 | 전방 10프레임의 곡률 및 목표 속도. MPPI의 Horizon과 동일한 미래 시야를 제공하여 코너링 전 선제적 감속/조향 유도. |
 
+### 2.1.1. 학습 시 (Training)
+
+| 차원 | 항목 | 출처 |
+| :--- | :--- | :--- |
+| **1** | `delta_v` (목표속도 - 현재속도) | Golden CSV (`blender_v` - `mppi_v`) |
+| **2** | `delta_heading` (목표heading - 현재heading) | Golden CSV (`blender_heading` - `mppi_heading`) |
+| **3** | `cross_track_error` (횡방향 오차) | Golden CSV (Mppi x,y vs Blender x,y) |
+| **4** | `v_current` (현재 속도) | Golden CSV (`mppi_v`) |
+| **5** | `kappa_current` (현재 곡률) | Golden CSV (`mppi_heading` 변화율로 계산) |
+| **6** | `prev_throttle` | 이전 스텝 label 값 |
+| **7** | `prev_steer` | 이전 스텝 label 값 |
+| **8~17** | `kappa_lookahead` × 10 | Blender CSV (kappa 미래 10프레임) |
+| **18~27** | `v_lookahead` × 10 | Blender CSV (v_smooth 미래 10프레임) |
+
+---
+
+### 2.1.2 추론 시 (Inference / Rollout)
+
+| 차원 | 항목 | 출처 |
+| :--- | :--- | :--- |
+| **1** | `delta_v` | Genesis 실시간 vs Blender CSV 목표 |
+| **2** | `delta_heading` | Genesis 실시간 vs Blender CSV 목표 |
+| **3** | `cross_track_error` | Genesis 실시간 위치 vs Blender CSV 목표 위치 |
+| **4** | `v_current` | Genesis 실시간 |
+| **5** | `kappa_current` | Genesis 실시간 heading 변화율 |
+| **6~7** | `prev_throttle`, `prev_steer` | BC가 직전에 출력한 값 |
+| **8~17** | `kappa_lookahead` × 10 | Blender CSV |
+| **18~27** | `v_lookahead` × 10 | Blender CSV |
+
+---
+
+## 핵심 요약
+
+* **현재 상태 (7차원)** $\rightarrow$ **학습:** Golden CSV / **추론:** Genesis 실시간
+* **미래 목표 (20차원)** $\rightarrow$ **학습/추론 모두:** Blender CSV (동일)
+
 ### 2.2. 출력 변수 및 손실 함수 (Output & Loss)
 * **Output (Y):** `throttle`, `steer` (2 Dims, Tanh 활성화 함수를 통해 [-1, 1] 스케일링)
 * **Loss Function (MSE):** 최적 제어값과의 평균 제곱 오차 최소화
