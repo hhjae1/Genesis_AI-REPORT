@@ -132,7 +132,7 @@ BC 학습에서 모델 구조를 결정할 때 두 가지 기준이 있었음.
 
 ## 7. BC의 본질적 한계: 정적 정책 vs 동적 최적화
 
-![alt text](images/sim2sim_review_image8.jpg)
+![alt text](images/sim2sim_review_image8.png)
 
 BC의 목적은 MPPI 없이 새로운 경로를 즉시 주행할 수 있는 **Inverse Controal(lightweight)** 정책을 만드는 것. MPPI는 Genesis 시뮬레이터가 반드시 필요하지만, BC는 학습 후 시뮬레이터 없이도 새 경로에 바로 제어를 추론할 수 있음.
 
