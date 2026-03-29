@@ -1,4 +1,4 @@
-# Kinematic → Dynamic Sim2Sim 근본적 시행착오 
+# Kinematic → Dynamic Sim2Sim 시행착오 및 구현 모델의 궁극적 의미
 
 
 ![alt text](images/sim2sim_review_image1.jpg)
