@@ -8,7 +8,6 @@
 Genesis solver 단독
 ├── 속도: 빠름 (병렬, GPU)
 └── 정확도: Bullet보다 낮음
-
         ↓ MLP 결합
 
 Genesis solver + MLP 보정
