@@ -14,7 +14,7 @@
 
 ### 문제 상황
 
-![alt text](images/spin_rear_problem.png)
+![alt text](images_jw/spin_rear_problem.png)
 
 - 초기 데이터 추출 시, `spin_rear` (뒷바퀴 회전 속도)에서 전진 데이터 임에도 불구하고 **음수 값이 발생**하는 문제가 있었다.
 
@@ -28,7 +28,7 @@
 
 ### 수정 결과
 
-![alt text](images/spin_rear_right.png)
+![alt text](images_jw/spin_rear_right.png)
   
 - 전진만 있는 경로 → 모두 양수로 수정됨
 
@@ -134,7 +134,7 @@ throttle = np.clip(throttle, -1, 1)
 
 #### Throttle 계산 결과
 
-![alt text](images/throttle.png)
+![alt text](images_jw/throttle.png)
 
 -> 전진 방향에 대한 데이터에 대해 추출했음에도 불구하고 throttle 값에 음수가 끼어있음. why? (아래 설명)
 

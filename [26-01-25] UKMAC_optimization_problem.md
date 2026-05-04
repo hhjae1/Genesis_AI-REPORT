@@ -6,7 +6,7 @@
 
 #### 2.  a, k 를 만족시키는 T, S 를 로컬 최적화화 찾고 T, S 를 가지고 직접적인 지도학습. 즉, loss 가 T, S 로부터 정의되도록 함.(Blender의 a, k는 위에서 추출한 것을 사용,  Genesis a, κ는 매번 새로 계산 - 최적화 시도할 때마다 genesis 시뮬레이션 실행)
 
-![alt text](images/UKMAC_optimization.png)
+![alt text](images_jw/UKMAC_optimization.png)
 
 #### 3. 이후 보정 단계에서 강화 학습.
 

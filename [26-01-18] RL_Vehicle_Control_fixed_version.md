@@ -9,7 +9,7 @@
 * **활성화 함수:** ELU (Exponential Linear Unit)
 * **구조 특징:** 9차원의 작은 입력 공간을 고려하여 **Narrow & Deep (좁고 깊은)** 형태 채택
 
-![alt text](images/actor_mlp_fixed.jpg)
+![alt text](images_jw/actor_mlp_fixed.jpg)
 
 | Layer | Nodes | Parameters Calculation | Count |
 | :--- | :--- | :--- | :--- |
@@ -20,7 +20,7 @@
 | **Output** | 2 | $64 \times 2 + 2$ | 130 |
 | **Total** | | **Actor Parameters** | **9,090** |
 
-![alt text](images/critic_mlp_fixed.jpg)
+![alt text](images_jw/critic_mlp_fixed.jpg)
 
 ### 1.2 Critic Network (가치 함수 네트워크)
 * **역할:** 현재 상태(State)의 가치(Value)를 추정하여 학습 방향 제시
@@ -59,7 +59,7 @@
 > * **CTE & Heading Error:** 경로 추종 정밀도를 높이기 위한 핵심 관측값
 > * **Previous Action:** 제어의 연속성(Temporal Information) 학습
 
-| ![CTE](images/CTE.jpg) | ![HeadingError](images/HeadingError.jpg) |
+| ![CTE](images_jw/CTE.jpg) | ![HeadingError](images_jw/HeadingError.jpg) |
 | :---: | :---: |
 | *(그림 1: 차량 중심에서 경로<br>중심선까지의 수직 거리인 CTE)* | *(그림 2: 경로(Target)와 차량(Current)<br>사이의 각도 차이인 Heading Error)* |
 

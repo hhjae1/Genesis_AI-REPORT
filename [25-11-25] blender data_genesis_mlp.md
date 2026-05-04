@@ -96,7 +96,7 @@ vel_B(t) = [pos_B(t) - pos_B(t-1)] / Δt
 ## 2. MLP 설계
 
 
-![alt text](images/MLP구조.gif)
+![alt text](images_jw/MLP구조.gif)
 
 **6 -> 64 -> 64 -> 2**
 

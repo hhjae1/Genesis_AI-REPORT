@@ -68,7 +68,7 @@ self.obs_buf = torch.cat(
 
 
 
-![alt text](images/MLP구조.gif)
+![alt text](images_jw/MLP구조.gif)
 
 **구조:**
 
@@ -219,7 +219,7 @@ crash_rew 값이 1일 때(추락 시) 큰 패널티
 
 ## 4. Critic 네트워크와 $V(s_t)$  
 
-![alt text](images/MLP구조.gif)
+![alt text](images_jw/MLP구조.gif)
 
 - Actor 네트워크와 같은 MLP 구조(마지막 출력값만 1차원으로 다름)
 - 입력: 드론 상태 관측값 (17차원)  

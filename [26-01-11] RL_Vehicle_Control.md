@@ -15,7 +15,7 @@ Genesis의 드론 예제를 기반으로 코드를 구조화:
 - **car_train_fixed.py**: 학습 스크립트 (OnPolicyRunner + PPO) -> ``MLP 구성 + 보상 가중치``
 - **car_eval_fixed.py**: 평가 스크립트 (시각화 + CSV 저장)
 
-![alt text](images/target_system.jpg)
+![alt text](images_jw/target_system.jpg)
 
 ### 2. 목표 타겟 시스템
 Pure Pursuit 알고리즘과 유사한 방식으로 타겟을 설정:
@@ -89,7 +89,7 @@ PPO 알고리즘은 Actor-Critic 구조를 사용하며, 두 개의 독립적인
 
 **역할**: 현재 관찰(observation)을 입력받아 행동(action)을 출력
 
-![alt text](images/actor_mlp.jpg)
+![alt text](images_jw/actor_mlp.jpg)
 
 ```
 입력층 (12차원)
@@ -111,7 +111,7 @@ PPO 알고리즘은 Actor-Critic 구조를 사용하며, 두 개의 독립적인
 
 **역할**: 현재 상태의 가치(Value)를 추정
 
-![alt text](images/critic_mlp.jpg)
+![alt text](images_jw/critic_mlp.jpg)
 
 ```
 입력층 (12차원)

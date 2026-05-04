@@ -66,7 +66,7 @@ reward =
 
 ## 4. Stage 1 결과: residual이 BC를 오히려 망침
 
-![alt text](images/bc_rl1.png)
+![alt text](images_jw/bc_rl1.png)
 
 처음 residual PPO는 다음 설정으로 진행
 
@@ -97,7 +97,7 @@ init_noise_std = 1.0
 
 ## 5. Stage 2 결과: 안정화는 되었지만 BC-only보다 좋지 않음
 
-![alt text](images/bc_rl2.png)
+![alt text](images_jw/bc_rl2.png)
 
 이후 residual을 작게 만들기 위해 다음과 같이 수정
 

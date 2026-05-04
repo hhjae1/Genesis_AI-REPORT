@@ -412,7 +412,7 @@ BC frozen + PPO residual + brake rollout
 
 | BC-only rollout | BC frozen + PPO residual + brake rollout |
 |---|---|
-| ![BC-only rollout](images/bc-only.png) | ![BC+RL hard v2 rollout](images/bc+rl.png) |
+| ![BC-only rollout](images_jw/bc-only.png) | ![BC+RL hard v2 rollout](images_jw/bc+rl.png) |
 | PPO residual을 사용하지 않고 BC controller만 적용한 결과 | Frozen BC 위에 PPO residual과 brake action을 추가한 결과 |
 
 Viewer 결과만 보면 BC-only와 BC+RL rollout이 거의 비슷한 경로 형태를 보였음. 따라서 시각적 결과만으로는 PPO residual이 lateral recovery에 뚜렷하게 기여했다고 보기 어려움.

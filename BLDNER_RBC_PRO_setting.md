@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/d2dee773-4524-4b29-9be7-f9f63c1b1d2f
 
 
 
-![alt text](images/custom_option.png)  ![alt text](images/QuickRig_option.png)
+![alt text](images_jw/custom_option.png)  ![alt text](images_jw/QuickRig_option.png)
 
 ``RBC에서 제공하는 차량 이외의 자신 원하는 차량을 import 한 후. Custom 탭을 이용해 직접 해당 차량의 Rig를 생성 가능     
 or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
@@ -19,7 +19,7 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 이 패널은 바퀴의 움직임(기구학)과 타이어의 마찰 특성(동역학)을 제어하는 곳
 
-![alt text](images/wheel.png)
+![alt text](images_jw/wheel.png)
 
 #### 1. Wheels (휠 기하학 및 조향)
 * **Pivot Point (회전 중심점):** 바퀴가 회전하는 축의 위치를 미세 조정. 휠 메쉬의 원점이 정중앙이 아닐 때 사용.
@@ -42,7 +42,7 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 ### RBC Tuning: 서스펜션(Suspension) 설정 가이드
 
-![alt text](images/suspension.png)
+![alt text](images_jw/suspension.png)
 
 #### 1. Limits (서스펜션 가동 범위)
 서스펜션이 위아래로 움직일 수 있는 최대 범위(Stroke)를 설정.
@@ -66,7 +66,7 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 ### RBC Tuning: Drivetrain (구동 및 조향) 설정 가이드
 
-![alt text](images/drivetrain.png)
+![alt text](images_jw/drivetrain.png)
 
 #### 1. Drive Modes (구동 방식 - 동력 전달)
 
@@ -94,7 +94,7 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 이 패널은 차량의 심장인 엔진의 출력 특성과 기어 변속 로직을 제어.
 
-![alt text](images/engine_basic.png)
+![alt text](images_jw/engine_basic.png)
 
 #### 1. Basic Mode (아케이드 설정)
 물리적인 계산보다는 단순히 '빠르기'만 조절하고 싶을 때 사용하는 간편 모드. 
@@ -107,7 +107,7 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 실제 차량의 **토크 곡선(Torque Curve)**과 **기어비(Gear Ratio)**를 입력하여 물리적으로 정확한 거동을 구현.
 
-![alt text](images/engine_advanced.png)
+![alt text](images_jw/engine_advanced.png)
 
 
 **A. Torque Curve (토크 곡선 그래프)**
@@ -140,7 +140,7 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 이 패널은 차량의 접지력을 인위적으로 보정하거나(Downforce), 주행 안정을 돕는 전자 장비(TCS)를 설정하여 **'운전의 편의성'**을 결정.
 
-![alt text](images/physics.png)
+![alt text](images_jw/physics.png)
 
 #### 1. Downward Force (다운포스 / 접지력 보정)
 차량을 지면으로 꾹 눌러주는 가상의 힘을 적용.
@@ -169,15 +169,15 @@ or Quick Rig 탭을 이용해 자동으로 Rig 생성(단. 조건 존재).``
 
 ## 3. 주행 경로 설정
 
-![alt text](images/make_guidepath.png)
+![alt text](images_jw/make_guidepath.png)
 
 `` curve에 있는 bezier, circle, path 등의 옵션을 선택해 원하는 모양의 경로를 직접 그려 생성 ``
 
-![alt text](images/guidepath1.png)
+![alt text](images_jw/guidepath1.png)
 
 `` controls의 guides 선택 후 Enalbe Guide를 클릭 해 활성화 ``
 
-![alt text](images/guidepath2.png)
+![alt text](images_jw/guidepath2.png)
 
 `` 위에서 만들어둔 경로를 선택 후 옵션 설정(자세한 내용은 아래 내용 참조)``
 
@@ -236,7 +236,7 @@ https://github.com/user-attachments/assets/dd35077a-38db-419b-8042-90946347b02e
 
 ## 4. 데이터 추출 
 
-![alt text](images/data_extraction.png)
+![alt text](images_jw/data_extraction.png)
 
 ``Scripting에 들어가 데이터 추출 코드를 직접 작성한 후 실행하여 추출``  
 -> **[blender_data 추출 코드](https://github.com/hhjae1/Genesis_AI-REPORT/blob/main/res/blender_data_extraction.py)**

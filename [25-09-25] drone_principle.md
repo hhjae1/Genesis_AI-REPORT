@@ -80,7 +80,7 @@ self.drone.set_propellels_rpm((1 + exec_actions * 0.8) * 14468.429183500699)
         /           \
     M4 (CCW)      M3 (CW)
 ```
-![alt text](images/drone.png)
+![alt text](images_jw/drone.png)
 
 - M1, M3 = 시계 방향 (CW)  
 - M2, M4 = 반시계 방향 (CCW)  
@@ -93,7 +93,7 @@ self.drone.set_propellels_rpm((1 + exec_actions * 0.8) * 14468.429183500699)
 - 상승: M1~M4 모두 ↑  
 - 하강: M1~M4 모두 ↓  
 
-![alt text](images/drone_rise.gif)
+![alt text](images_jw/drone_rise.gif)
 ---
 
 ### (2) 전진 / 후진
@@ -101,7 +101,7 @@ self.drone.set_propellels_rpm((1 + exec_actions * 0.8) * 14468.429183500699)
 - 전진: M1, M2 ↓, M3, M4 ↑ → 드론이 앞으로 기울어 전진  
 - 후진: M1, M2 ↑, M3, M4 ↓ → 드론이 뒤로 기울어 후진  
 
-![alt text](images/drone_front.gif)
+![alt text](images_jw/drone_front.gif)
 ---
 
 ### (3) 좌/우 이동
@@ -111,7 +111,7 @@ self.drone.set_propellels_rpm((1 + exec_actions * 0.8) * 14468.429183500699)
   
 > 각 각 좌우로 기울어 이동
 
-![alt text](images/drone_right.gif)
+![alt text](images_jw/drone_right.gif)
 ---
 
 ### (4) Yaw 회전
@@ -119,4 +119,4 @@ self.drone.set_propellels_rpm((1 + exec_actions * 0.8) * 14468.429183500699)
 - 시계 방향 회전: M1, M3 ↓, M2, M4 ↑  
 - 반시계 방향 회전: M2, M4 ↓, M1, M3 ↑  
 
-![alt text](images/drone_yaw.gif)
+![alt text](images_jw/drone_yaw.gif)

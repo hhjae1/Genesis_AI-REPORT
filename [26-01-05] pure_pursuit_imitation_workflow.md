@@ -24,7 +24,7 @@
    -> ``아래 사진의 파란색 선처럼 경로가 그려짐``  
 
 
-![alt text](images/pure_pursuit.png)
+![alt text](images_jw/pure_pursuit.png)
 - 초록색 점: 출발점
 - 빨간색 점: 종착점
 - 파란색 선: 추종 경로
@@ -38,7 +38,7 @@
 #### 1.  Input Parameters (MLP가 보는 것)
 - **Speed**: 현재 차량의 속력  
 
-  ![alt text](images/speed.png)
+  ![alt text](images_jw/speed.png)
 - **Target Local X** (전방 거리): 내 차 기준, 목표점이 앞뒤로 어디 있는가?
 - **Target Local Y** (측면 거리): 내 차 기준, 목표점이 좌우로 어디 있는가?
   - **계산 방법**:
