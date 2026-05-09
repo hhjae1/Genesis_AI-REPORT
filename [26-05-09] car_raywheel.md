@@ -106,7 +106,7 @@ self.car.set_dofs_position(
 
 ![Coulomb vs Pacejka — longitudinal & lateral force 곡선](images_jw/tire_curve_both.png)
 
-``-> 위 그래프를 보면 Coulomb은 linear하게 이어져 있어, Pacejka에 비해 차량의 동작이 부자연스러울 것으로 에상 가능.``
+``-> 위 그래프를 보면 Coulomb은 linear하게 이어져 있어, Pacejka에 비해 차량의 동작이 부자연스러울 것으로 예상 가능.``
 
   #### Coulomb 의 한계
   1. **Sharp saturation**: 작은 slip 만 지나면 마찰력이 곧장 최대값에 도달. 실차처럼 *한 번 솟구쳤다 살짝 내려오는* 거동 표현 못 함
