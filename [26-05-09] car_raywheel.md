@@ -97,12 +97,91 @@ self.car.set_dofs_position(
 
 ---
 
-## 4. ray 로 바꾼 이유 — Coulomb (mesh-mesh) vs Pacejka (ray) 비교
+## 4. Custom Raycaster Pattern (sensing layer)
+
+### 4.1 `gs.sensors.Raycaster`
+
+- Genesis 가 기본 제공하는 ray-cast 센서.   
+- 어떤 entity 에 부착하면 그 entity 의 위치·자세 기준으로 ray 를 쏴서 닿은 곳까지의 **거리·위치 정보**를 알려줌. 우리는 자동차에 부착.
+
+
+### 4.2 `RaycastPattern`
+
+Raycaster 가 쏠 ray 가 **어디서 어떤 방향으로** 쏘아질지를 정의하는 객체. Genesis 가 기본 제공하는 패턴:
+
+- **GridPattern** — ray 를 격자 형태로 (LiDAR 같은 정면 sweep)
+  ```
+  ● ● ● ●
+  ● ● ● ●
+  ● ● ● ●
+  ```
+
+- **SphericalPattern** — 사방으로 퍼지는 ray (drone obstacle 감지 등)
+  ```
+        ↑
+     ↖  |  ↗
+   ←─── ● ───→
+     ↙  |  ↘
+        ↓
+  ```
+
+``-> 기본 제공 패턴 중엔 차량 4 wheel 위치에서 아래로만 쏘는 게 없음 → -z 방향으로 쏘는 ray를 custom 정의.``  
+``-> ray 4 개로 4 wheel 의 ground 정보를 한 번에 받음. 이 distances 로 가상 suspension force 와 tire force 가 외부 계산됨.``
+
+![raywheel](images_jw/raywheel.png)
+
+### 4.3 Compression & Suspension 반력 N (비대칭 damper)
+
+#### Compression
+
+ray hit_distance 로부터 spring 압축량 계산:
+
+```
+compression = max(REST_D − hit_distance, 0)
+REST_D = TIRE_R + L_SUSP = 0.358 + 0.10 = 0.458 m
+```
+
+- **REST_D**: wheel 이 ground 에 막 닿은 (무하중) 시점에서 ray 가 측정해야 할 거리.
+- **compression > 0**: 지면이 wheel 을 위로 누르는 만큼 spring 이 눌린 상태.
+- **compression = 0**: wheel 공중 (`max()` 로 음수 차단 — distance > REST_D 면 wheel 자유 매달림).
+
+평형 시 값: 차량 무게 (mg ≈ 21582 N) 가 4 wheel 균등 분배 → 각 wheel 의 spring 이 약 **7.7 cm 압축된 상태로 정지** (`mg / (4 · K_SUSP) = 21582 / 280000 ≈ 0.077 m`).
+
+#### 비대칭 damper — Suspension 반력 N
+
+compression 으로부터 chassis 에 인가될 수직 반력 N 계산:
+
+```
+N = K_SUSP · compression + C_damp · ċ          (N ≥ 0)
+
+C_damp = C_COMP (= 14000 N·s/m)   if ċ > 0     (압축 진행 중)
+       = C_EXT  (=  4000 N·s/m)   if ċ < 0     (신장 진행 중)
+```
+
+- **K_SUSP**: spring 항. 
+- **compression**: 눌린 양에 비례하는 복원력.
+- **C_damp**: damper 항. 
+- **ċ**: compression 의 시간 미분 (= 압축 속도).
+- **C_COMP > C_EXT (14000 vs 4000) — 비대칭**:
+  - **압축 시 (ċ > 0)**: 노면 충격을 강하게 흡수 → 진동 빠르게 잡음
+  - **신장 시 (ċ < 0)**: 약하게 저항 → wheel 이 ground 로 다시 내려갈 시간 확보
+  - 대칭이면 통통 튀거나 (under-damped) 둔하게 가라앉음 (over-damped).  
+  - 비대칭 = 실차 shock absorber 의 표준 거동.
+
+![비대칭 damp](images_jw/static_drop.gif)
+
+
+``→ 비대칭 damper 덕에 차량이 ground 에 닿은 뒤 1~2 회 작은 bounce 만으로 평형 (chassis_z ≈ 0.04 m, compression ≈ 7.7 cm) 에 빠르게 안착.``
+``→ N 은 chassis 에 외력으로 인가되어 차량을 ground 위에 띄우는 수직 force.``
+
+---
+
+## 5. ray 로 바꾼 이유 — Coulomb (mesh-mesh) vs Pacejka (ray) 비교
 
 - **Coulomb** = 기존 mesh-mesh contact 방식. Genesis (그리고 MuJoCo, Bullet, PhysX 등 대부분의 rigid body engine) 가 contact solver 내부에 hard-code 한 마찰 모델.
 - **Pacejka** = ray-based 차량 시뮬에서 채택하는 magic formula. 실제 타이어의 비선형 grip 곡선을 모델링.
 
-### 4.1 두 모델의 force 곡선 비교
+### 5.1 두 모델의 force 곡선 비교
 
 ![Coulomb vs Pacejka — longitudinal & lateral force 곡선](images_jw/tire_curve_both.png)
 
@@ -121,7 +200,7 @@ self.car.set_dofs_position(
 ``-> 그래프를 보면 Coulomb 은 한계(-1, 1)까지 가속하다가 그냥 직선으로 평평하게 (sharp clip). Pacejka 는 한 번 솟구쳤다가 살짝 내려옴. ``    
 ``-> 즉, Pacejka가 Coulomb보다 더 실제에 가까운 움직임을 모사.``
 
-### 4.2 두 모델 비교
+### 5.2 두 모델 비교
 
 - 같은 차량·같은 입력 (`steer = +0.35` rad, throttle 0, brake 0) 에 두 tire model 만 swap 해서 동시에 주행.   
 
@@ -139,7 +218,7 @@ https://github.com/user-attachments/assets/ddca9588-6955-4bdb-8e97-e0b589dc768c
 
 `` -> mesh-mesh collision은 coulomb으로 제한되어 있어 tire는 ray가 더 물리적으로 정확. (일반 강체 충돌 (박스, 로봇, 부품) 에는 적합하지만, 타이어에는 부적합.) 속도 측면에서도 ray가 우월 ``
 
-### 4.3 ray-wheel 의 두 가지 우월성
+### 5.3 ray-wheel 의 두 가지 우월성
 
 #### 정확성
 
