@@ -84,7 +84,7 @@ self.car.set_dofs_position(
 
 - **물리는 여전히 ray-based**: Genesis 자체 prismatic spring 사용 안 함. 우리 가상 suspension 의 normal force N, longitudinal/lateral tire force 만 외력으로 chassis 에 적용.
 - **시각만 prismatic 으로 동적 정렬**: wheel mesh 가 ground 표면 (heightfield 포함)을 정확히 추종.
-- ``이 패턴은 CARLA, Unity Vehicle Physics, Unreal Chaos Vehicles 등 **산업 표준 vehicle simulator 의 공통 방식**.``
+- ``이 패턴은 CARLA, Unity Vehicle Physics, Unreal Chaos Vehicles 등 산업 표준 vehicle simulator 의 공통 방식.``
 
 ### 3.4 결과
 
