@@ -1,14 +1,10 @@
-# BC Frozen + PPO Residual Brake Controller 기반 초기 외란 복구 실험 보고서
+# BC Frozen + RL Residual Brake Controller 기반 초기 외란 복구 실험 보고서
 
-## 1. 실험 목적
+## 1. 실험 설계
 
-본 실험의 목적은 기존 BC controller가 생성하는 nominal control 위에 PPO residual controller를 추가하여, 차량의 초기 상태가 reference path에서 벗어난 경우에도 다시 원래 path로 복귀할 수 있는지 확인하는 것임.
+기존에 설계한 max fricition 기반으로 학습한 path2st 모델을 사용하고, 그 위에 RL을 입혀 학습한 path2st 모델이 잘 추종하는 경로에 변수(ex:아래에서 실험한 차량의 시작 초기 위치를 옆으로 이동시키는 것 등)를 주었을 때 원래의 경로로 복귀하여 주행을 잘 시행하는 지를 봄. 
 
-기존 BC controller는 reference path로부터 생성한 golden/teacher trajectory와 control label을 이용해 학습된 모델임. 즉, reference path를 따라가기 위한 기본적인 `[throttle, steer]` 제어는 BC가 담당함.
-
-하지만 차량이 path 옆으로 밀려 있거나 heading이 틀어진 경우, BC controller만으로는 복구가 늦거나 path 이탈이 커질 수 있음. 따라서 본 실험에서는 BC controller를 frozen 상태로 유지하고, PPO가 그 위에 residual correction을 추가로 학습하도록 구성했음.
-
-또한 교수님 미팅 내용에 따라 기존 `[throttle, steer]` 구조에 `brake`를 추가했음. 이는 throttle을 줄이는 것만으로는 적극적인 감속이 어렵기 때문에, 필요 시 brake torque를 이용해 차량을 감속시키면서 path recovery를 수행하기 위함.
+또한, 기존 path2st 모델은 output으로 s,t를 반환하지만, RL를 거친 후에는 s,t,b를 출력하도록 설계함. 즉, RL로 residual, 경로에 변수를 주었을 때 단순히 s,t로 보정을 하는 것이 아닌 brake까지 사용하여 잘 복구할 수 있도록 설계한 것임.
 
 ---
 
