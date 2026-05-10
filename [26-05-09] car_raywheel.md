@@ -206,7 +206,7 @@ C_damp = C_COMP (= 14000 N·s/m)   if ċ > 0     (압축 진행 중)
 
 ![Coulomb vs Pacejka](images_jw/compare_tires.png)
 
-https://github.com/user-attachments/assets/ddca9588-6955-4bdb-8e97-e0b589dc768c
+https://github.com/user-attachments/assets/e82ef9ea-7134-4796-947c-ede040bd008f
 
 핵심 거동 차이:
 - **Coulomb (빨강)**: 회전 시작 즉시 횡 slip 우세 → friction vector 가 거의 횡방향 → 종방향 마찰력 소실 → **급감속 + 작은 회전 반경**.
