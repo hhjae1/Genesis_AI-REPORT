@@ -8,63 +8,9 @@
 
 ---
 
-## 2. 전체 학습 및 제어 구조
+## 2. Soft Intervention 구조
 
-전체 구조는 다음과 같음.
-
-```text
-Reference path
-    ↓
-Golden / teacher trajectory 및 control label 생성
-    ↓
-BC controller 학습
-    ↓
-Frozen BC controller
-    ↓
-BC nominal action = [bc_throttle, bc_steer]
-    ↓
-PPO residual policy
-    ↓
-RL residual action = [delta_throttle_raw, delta_steer_raw, brake_raw]
-    ↓
-risk-based intervention_ratio 계산
-    ↓
-BC action + gated PPO residual
-    ↓
-final control = [effective_throttle, final_steer, brake]
-    ↓
-Genesis vehicle simulation
-```
-
-여기서 중요한 점은 **PPO가 출력한 residual action이 곧바로 최종 control이 되는 것이 아니라는 점**임.
-
-PPO의 출력은 다음과 같음.
-
-```text
-RL residual action = [delta_throttle_raw, delta_steer_raw, brake_raw]
-```
-
-이 값은 최종 control 자체가 아니라, 매 simulation step에서 BC nominal action을 보정하기 위한 값임.
-
-각 step마다 현재 차량 상태를 관측하고, BC controller는 `[bc_throttle, bc_steer]`를 출력함. 동시에 PPO residual policy는 `[delta_throttle_raw, delta_steer_raw, brake_raw]`를 출력함. 이후 현재 상태의 위험도를 기반으로 `intervention_ratio`를 계산하고, 이 값을 PPO residual에 곱해 BC action에 반영함.
-
-따라서 최종 control은 다음 개념으로 계산됨.
-
-```text
-final control
-= BC nominal control
-+ intervention_ratio × residual_scale × PPO residual
-```
-
-즉 PPO는 차량 제어를 처음부터 전부 만드는 것이 아니라, **BC가 만든 nominal control을 매 step마다 어느 정도 보정할지 학습하는 구조**임.
-
-이 final control이 Genesis physics step에 적용되고, 그 결과 차량의 다음 위치, 속도, heading이 결정됨. 다음 step에서는 다시 업데이트된 차량 상태를 관측하고, 같은 과정을 반복함.
-
----
-
-## 3. Soft Intervention 구조
-
-교수님께서 말씀하신 “hard하게 개입하지 말고 soft하게 개입”한다는 내용은 현재 구현에서 **보상함수 항이 아니라 action-level gating 구조**로 반영했음.
+“hard하게 개입하지 말고 soft하게 개입”한다는 내용은 현재 구현에서 **보상함수 항이 아니라 action-level gating 구조**로 반영함.
 
 즉 PPO residual을 항상 같은 강도로 적용하지 않고, 현재 차량 상태가 위험할수록 더 크게 반영함.
 
@@ -112,11 +58,11 @@ RL을 항상 강하게 개입시키는 것이 아니라,
 
 ---
 
-## 4. PPO 학습 설계
+## 3. PPO 학습 설계
 
-### 4-1. Reward 설계
+### 3-1. Reward 설계
 
-PPO residual controller는 path recovery를 목표로 학습함. 보상함수는 여러 항을 과도하게 추가하기보다, path tracking에 직접적으로 관련된 항을 중심으로 구성했음.
+PPO residual controller는 path recovery를 목표로 학습함. 보상함수는 여러 항을 과도하게 추가했을 때, *Reward hacking* 현상이 빈번하게 발생할 수 있어 5개의 항으로 구성.
 
 현재 reward의 주요 구성은 다음과 같음.
 
