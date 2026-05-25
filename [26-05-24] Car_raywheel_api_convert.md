@@ -275,7 +275,15 @@ self.physics = VehiclePhysics(
 ```
 - **add_vehicle**은 기존에 따로 호출했던 URDF와 Sensor를 같이 호출하고 해당 차량의 특성(drive, brake 토크, 후륜, Pacejka 방식 물리 계산, hooks 등)들을 cfg로 묶어 관리하여 셋을 같이 쉽게 관리할 수 있게 해줌. 
 - **preset(여기서는 car_4w_rwd_ackermann)** 은 원하는 차량의 cfg의 기본값을 제공하여 더욱 더 쉽게 접근 가능.
-- **VehiclePhysics**는 앞에서 만든 scene / car / sensor / cfg 를 받아 매 step 마다 5-step pipeline (raycast → suspension → slip → tire → omega) 을 실행하는 driver.
+- **VehiclePhysics**는 앞에서 만든 scene / car / sensor / cfg 를 받아 매 step 마다 5-step pipeline (raycast → suspension → slip → tire → omega) 을 실행하는 driver. 근데 이것을 loop가 아닌 하나의 tensor로 처리하여 속도 측면에서 이점을 가져감.(자세한 정리는 아래)
+
+**1. VehiclePhysics 효과**
+
+옛 `CarRayWheelPhysics.step()` 은 wheel 별로 Python `for i in range(4)` loop를 돌면서 raycast / suspension / tire force 를 따로 계산했음. n_envs=200 인 MPPI imagination rollout 에서는 매 step 마다 wheel 별 kernel launch 가 4 배로 누적되어 GPU launch overhead 가 큼.
+
+SDK는 **per-wheel pipeline 이 vectorize 됨** — Python loop 제거, `(n_envs, n_wheels)` shape ```tensor``` 로 한 번에 처리. Kernel launch 수가 ~250 → ~25 로 1/10 수준. 우리는 단순히 `CarRayWheelPhysics(...)` → `VehiclePhysics(...)` 로 교체했을 뿐인데 학습 속도가 휠씬 빨라질 것으로 예상
+
+```→ 즉, 우리 기존 코드는 wheel 별 계산을 loop 로 돌면서 GPU 작업 요청을 여러 번 했지만, SDK 는 이 계산을 tensor 하나로 묶어 한 번에 처리해서 학습 속도에서 큰 이점을 얻는 것.``` 
 
 ---
 
@@ -296,14 +304,14 @@ MPPI 의 imagination rollout 을 위해 env 0 (real) 의 state 를 env 1~200 (im
 - `last_kappa`, `last_alpha`: 직전 step 의 slip ratio (κ) / slip angle (α).
 
 
-**SDK 가 추가한 attribute 4 개 — 왜 필요?**
+**1. SDK 가 추가한 attribute 4 개 — 왜 필요?**
 
 기존 옛 코드는 모든 로직 Monolithic step() 안에 다 구현되어 있었음. But,
 
 ```-> SDK 는 hook system 도입으로 hook이 이런 중간값을 외부에서 읽기 때문에 instance attribute 로 노출시켰고, 그래서 결정적 rollout 위해 snapshot 에도 포함해야 함.(hook 추가로 인해 고려해야 할 attribute가 늚.)```
  
 
-**효과** — 결정론적 rollout 보장 + Hook 친화적:
+**2. 효과** — 결정론적 rollout 보장 + Hook 친화적:
 
 - 시뮬 자체 결정성은 `omega` 와 `prev_compression` 만 복원해도 보장됨. 하지만 stability hook (RollingResistance / LowSpeedRegularizer / **StaticFrictionLock**) 이나 cost 함수가 `last_*` 를 참조할 수 있음   
 —> 예를 들어 friction ellipse 안 / 밖 판단에 `last_kappa`, `last_alpha` 사용.
@@ -336,19 +344,8 @@ def run_golden_mining(blender_csv, urdf_path, ...):
         results.append(...)
 ```
 
-→ **이 함수 body 는 한 줄도 안 바뀜**. env class 의 `__init__` 내부만 SDK 로 바뀌었을 뿐, 외부에서 호출하는 메서드 시그니처 (`reset_to_state`, `stabilize`, `step_real_only`) 가 모두 동일하기 때문.
+→ **이 함수 body 는 한 줄도 안 바뀜**. env class 의 `__init__` 내부만 SDK 로 바뀌었을 뿐, 외부에서 호출하는 메서드 시그니처 (`reset_to_state`, `stabilize`, `step_real_only`) 가 모두 동일하기 때문에 수정이 불필요했음.
 
-**왜 이게 가능했나**:
-
-```
-[run_golden_mining (driver)]   ← 변경 X
-        ↓ 객체 메서드 호출
-[GenesisEnvSlidingMPPIRaywheel] ← 내부 __init__ 만 SDK 로 변경
-        ↓ 메서드 시그니처 동일
-[self.physics: VehiclePhysics] ← 실제 SDK 호출은 여기서만
-```
-
-→ Driver layer 가 env 객체의 **public interface 만 호출**하니까, env 내부 구현이 (`CarRayWheelPhysics` → `VehiclePhysics`) 바뀌어도 영향 받지 않음. 캡슐화 (encapsulation) 의 효과.
 
 
 
