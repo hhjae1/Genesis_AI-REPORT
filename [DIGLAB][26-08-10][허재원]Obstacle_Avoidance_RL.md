@@ -56,8 +56,8 @@ https://github.com/user-attachments/assets/879efe2d-091e-451d-87c9-fac3053f9013
 ### 3.1 거리 두 개를 관측과 게이트에 넣음
 
 ```
-last point to brake   d_LPB = v² / (2·a_brake)
-last point to steer   d_LPS = v·√(2·Δy / a_lat)      Δy = 회피에 필요한 횡변위
+last point to brake (제동으로 멈출 수 있는 마지막 지점)   d_LPB = v² / (2·a_brake)
+last point to steer (조향으로 비킬 수 있는 마지막 지점)   d_LPS = v·√(2·Δy / a_lat)      Δy = 회피에 필요한 횡변위
 ```
 
 - 관측에 `d_gap / d_LPB` 와 `d_gap / d_LPS` 를 넣음. 1 보다 작으면 **이미 못 멈춤 / 못 틂**  
@@ -77,8 +77,8 @@ last point to steer   d_LPS = v·√(2·Δy / a_lat)      Δy = 회피에 필요
 | 제동 감속도 `a_brake` | 8.65 m/s² (0.88 g) | 6.0 |
 | 횡가속도 `a_lat` | 11.0 m/s² (1.12 g) | 7.0 |
 
-- yaw rate 로 횡가속도를 구하면 1.27~1.99 g 가 나오는데 미끄러지는 구간이 섞인 값.  
--> 속도가 유지된 skidpad 구간만 취해야 마찰 한계 안의 값이 나옴.
+- yaw rate(차가 도는 각속도) 로 횡가속도를 구하면 1.27~1.99 g 가 나오는데 미끄러지는 구간이 섞인 값.  
+-> 속도가 유지된 skidpad(일정 반경으로 도는 구간) 만 취해야 마찰 한계 안의 값이 나옴.
 
 ### 3.2 결과
 
@@ -152,7 +152,7 @@ last point to steer   d_LPS = v·√(2·Δy / a_lat)      Δy = 회피에 필요
 
 ## 5. 부수 확인
 
-**Action saturation** — 정책 평균 출력이 ±50~130 인데 행동은 [−1, 1] 로 잘림 -> 사실상 두 값만 내는 제어기.
+**Action saturation** (출력이 한계값에 붙어버리는 현상) — 정책 평균 출력이 ±50~130 인데 행동은 [−1, 1] 로 잘림 -> 사실상 두 값만 내는 제어기.
 
 | 체크포인트 | 탐색잡음 std | 출력층 가중치 평균 |
 |---|---|---|
@@ -164,7 +164,7 @@ last point to steer   d_LPS = v·√(2·Δy / a_lat)      Δy = 회피에 필요
 - 정지 장애물 회피는 포화 상태에서도 100% 였음. 조향을 크게 한 번 트는 임무라 두 값으로 충분  
 -> **한 임무 성적으로 정책 상태를 판단하면 안 됨**
 
-**측정 지표** — same-time drift 는 횡·종 오차가 섞여 주지표로 부적합.
+**측정 지표** — same-time drift(같은 시각의 두 위치 사이 거리) 는 횡·종 오차가 섞여 주지표로 부적합.
 
 - 같은 정책이 `dyn24_road` 에서 same-time drift 1.05 m, 경로까지 수직거리 0.15 m 로 7배 차이. 체크포인트 순위도 뒤바뀜  
 -> **수직거리(m) + 앞섬·뒤처짐(m) + 속도오차(m/s)** 세 가지 병기
