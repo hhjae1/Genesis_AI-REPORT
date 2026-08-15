@@ -1,4 +1,4 @@
-# Genesis 차량 자율주행 파이프라인 — 요약 보고서
+# Genesis 차량 자율주행 파이프라인
 
 Blender(RBC/Bullet) → Genesis Sim2Sim · Golden Truth → BC → Residual RL
 대상 기간 2025-11 ~ 2026-08
