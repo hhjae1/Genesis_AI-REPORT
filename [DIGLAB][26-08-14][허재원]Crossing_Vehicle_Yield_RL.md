@@ -97,7 +97,7 @@ v_allow = √(2·a·d)      a = 3.0 m/s²(설계 제동 6.0 의 절반),  d = �
 - ctp 0.08~0.18 m, v_err 0.07~0.17 m/s 로 추종은 유지됨
 
 
-**영상** — [video_jw/hz_entry_hzn.mp4](video_jw/hz_entry_hzn.mp4).   
+https://github.com/user-attachments/assets/54c7767b-6363-4346-9239-23fa2431a3e3  
 `shp_scurve` 경로, 직각 횡단 차량이 자차 도달 시각에 맞춰 교차점을 지나는 상황. 
 
 - 위 영상에서 주행 차량이 교차점 근처에 도달하는 순간 조향이 흔들림.
