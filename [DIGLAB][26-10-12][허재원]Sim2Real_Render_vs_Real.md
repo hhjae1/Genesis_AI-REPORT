@@ -71,9 +71,9 @@
 개루프 영상 (각 영상 왼쪽 Genesis 입력, 오른쪽 s2r 입력)
 
 <table>
-<tr><td align="center"><a href="video_jw/s2r_OL1_A1_S.mp4"><img src="images_jw/thumb_s2r_OL1_A1_S.png" width="420"></a><br>A 빈 도로 · S자</td><td align="center"><a href="video_jw/s2r_OL1_A2_hs.mp4"><img src="images_jw/thumb_s2r_OL1_A2_hs.png" width="420"></a><br>A 빈 도로 · 고속 S곡선</td></tr>
-<tr><td align="center"><a href="video_jw/s2r_OL1_A3_realclip.mp4"><img src="images_jw/thumb_s2r_OL1_A3_realclip.png" width="420"></a><br>A 빈 도로 · 실제 클립</td><td align="center"><a href="video_jw/s2r_OL1_B1_S.mp4"><img src="images_jw/thumb_s2r_OL1_B1_S.png" width="420"></a><br>B 앞차 · S자</td></tr>
-<tr><td align="center"><a href="video_jw/s2r_OL1_B2_realclip.mp4"><img src="images_jw/thumb_s2r_OL1_B2_realclip.png" width="420"></a><br>B 앞차 · 실제 클립</td></tr>
+<tr><td align="center"><a href="https://github.com/user-attachments/assets/ebd56f3f-2419-411b-ba6c-90fa006f7317"><img src="images_jw/thumb_s2r_OL1_A1_S.png" width="420"></a><br>A 빈 도로 · S자</td><td align="center"><a href="https://github.com/user-attachments/assets/fd9fda2d-d460-43b5-85f4-21ae3499d7ef"><img src="images_jw/thumb_s2r_OL1_A2_hs.png" width="420"></a><br>A 빈 도로 · 고속 S곡선</td></tr>
+<tr><td align="center"><a href="https://github.com/user-attachments/assets/ab2493df-f29b-4e01-8467-d239acc22f86"><img src="images_jw/thumb_s2r_OL1_A3_realclip.png" width="420"></a><br>A 빈 도로 · 실제 클립</td><td align="center"><a href="https://github.com/user-attachments/assets/6314bef7-e2f3-436c-b92f-24eb5cae4d77"><img src="images_jw/thumb_s2r_OL1_B1_S.png" width="420"></a><br>B 앞차 · S자</td></tr>
+<tr><td align="center"><a href="https://github.com/user-attachments/assets/e368619a-35b4-4ab8-9f62-93dc858548c1"><img src="images_jw/thumb_s2r_OL1_B2_realclip.png" width="420"></a><br>B 앞차 · 실제 클립</td></tr>
 </table>
 
 ### 2.3 폐루프
@@ -99,9 +99,9 @@
 - 개루프·폐루프 모두 실사 변환 쪽이 나쁨 -> 2.1 그림의 생성 결함(건물 휨·번짐) 문제 -> 2.2절에서의 언급처럼 실험 진행 중.
 
 <table>
-<tr><td align="center"><a href="video_jw/s2r_S18_cl_A1_S.mp4"><img src="images_jw/thumb_s2r_S18_cl_A1_S.png" width="420"></a><br>A 빈 도로 · S자</td><td align="center"><a href="video_jw/s2r_S18_cl_A2_hs.mp4"><img src="images_jw/thumb_s2r_S18_cl_A2_hs.png" width="420"></a><br>A 빈 도로 · 고속 S곡선</td></tr>
-<tr><td align="center"><a href="video_jw/s2r_S18_cl_A3_realclip.mp4"><img src="images_jw/thumb_s2r_S18_cl_A3_realclip.png" width="420"></a><br>A 빈 도로 · 실제 클립</td><td align="center"><a href="video_jw/s2r_S18_cl_B1_S.mp4"><img src="images_jw/thumb_s2r_S18_cl_B1_S.png" width="420"></a><br>B 앞차 · S자</td></tr>
-<tr><td align="center"><a href="video_jw/s2r_S18_cl_B2_realclip.mp4"><img src="images_jw/thumb_s2r_S18_cl_B2_realclip.png" width="420"></a><br>B 앞차 · 실제 클립</td></tr>
+<tr><td align="center"><a href="https://github.com/user-attachments/assets/433466da-adad-49d7-b7dc-ce5b6b8c50a7"><img src="images_jw/thumb_s2r_S18_cl_A1_S.png" width="420"></a><br>A 빈 도로 · S자</td><td align="center"><a href="https://github.com/user-attachments/assets/602eb245-624f-43ab-8bd7-7247cf4da231"><img src="images_jw/thumb_s2r_S18_cl_A2_hs.png" width="420"></a><br>A 빈 도로 · 고속 S곡선</td></tr>
+<tr><td align="center"><a href="https://github.com/user-attachments/assets/1556c200-0b10-4441-a1e5-f3b0ce7c2bfc"><img src="images_jw/thumb_s2r_S18_cl_A3_realclip.png" width="420"></a><br>A 빈 도로 · 실제 클립</td><td align="center"><a href="https://github.com/user-attachments/assets/351a4267-35a6-4ec5-b0c9-437881f93adb"><img src="images_jw/thumb_s2r_S18_cl_B1_S.png" width="420"></a><br>B 앞차 · S자</td></tr>
+<tr><td align="center"><a href="https://github.com/user-attachments/assets/56eab002-7458-47a3-bfe0-39860936cfaf"><img src="images_jw/thumb_s2r_S18_cl_B2_realclip.png" width="420"></a><br>B 앞차 · 실제 클립</td></tr>
 </table>
 
 ---
@@ -123,7 +123,7 @@
 
 ![진짜 앞 카메라(왼쪽) vs Genesis 재현(오른쪽)](images_jw/s2r_recon_render_cmp.png)
 
-[![](images_jw/thumb_s2r_recon_real_vs_gen.png)](video_jw/s2r_recon_real_vs_gen.mp4)
+[![](images_jw/thumb_s2r_recon_real_vs_gen.png)](https://github.com/user-attachments/assets/c5b7907b-f066-4542-9b6c-9a15137f0593)
 
 ### 3.2 개루프 결과
 
@@ -159,7 +159,7 @@
 - 대신 앞이 빈 U자 커브에서 47 → 0 km/h 로 감속해 184 m 지점(22.5 s)에서 정지, 24.4 s 재출발. 같은 구간 실제 운전자는 45 km/h 유지
 - 멈추기 직전 Alpamayo 는 앞이 비었는데도 "오른쪽 커브라 감속"(Adapt speed for the right curve)이라는 판단을 반복하며 계획 속도를 0 까지 낮춤 -> 2.3 절과 같은 Alpamayo 자체의 문제 (Park & Shim [1], VLADriveBench [2])
 
-[![](images_jw/thumb_s2r_recon_cl_s42.png)](video_jw/s2r_recon_cl_s42.mp4)
+[![](images_jw/thumb_s2r_recon_cl_s42.png)](https://github.com/user-attachments/assets/a4dde668-63a0-4dd5-8073-57c4f57f235d)
 
 ## 5. TODO
 
