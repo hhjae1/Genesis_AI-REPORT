@@ -124,8 +124,8 @@ open-loop 영상 (각 영상 왼쪽 Genesis 입력, 오른쪽 s2r 입력)
 
 ![진짜 앞 카메라(왼쪽) vs Genesis 재현(오른쪽)](images_jw/s2r_recon_render_cmp.png)
 
-### 재현영상 
-[![](images_jw/thumb_v2_recon_ol.png)](https://github.com/user-attachments/assets/1d5b1bab-2b2e-4bc9-9d45-00427085acb8)
+### open-loop 영상
+[![](images_jw/thumb_v2_recon_ol.png)](https://github.com/user-attachments/assets/6d3ef87f-7ef4-44ae-9509-db253f66c4b2)
 
 ### 3.2 open-loop 결과
 
@@ -160,7 +160,7 @@ open-loop 영상 (각 영상 왼쪽 Genesis 입력, 오른쪽 s2r 입력)
 
 - 멈추기 직전 Alpamayo 는 앞이 비었는데도 "오른쪽 커브라 감속"(Adapt speed for the right curve)이라는 판단을 반복하며 계획 속도를 0 까지 낮춤 -> 2.3 절과 같은 Alpamayo 자체의 문제 (Park & Shim [1], VLADriveBench [2])
 
-[![](images_jw/thumb_v2_recon_cl.png)](https://github.com/user-attachments/assets/f6ad2c4f-2725-4d6a-916f-35b5af4c0220)
+[![](images_jw/thumb_v2_recon_cl.png)](https://github.com/user-attachments/assets/8e4cd265-5ab8-4e9d-ab79-a26db3bd31d3)
 
 ## 5. TODO
 
@@ -171,3 +171,4 @@ open-loop 영상 (각 영상 왼쪽 Genesis 입력, 오른쪽 s2r 입력)
 
 1. Park & Shim, *Grounding Driving VLA via Inverse Kinematics*, arXiv 2605.21061 (2026-05). https://arxiv.org/abs/2605.21061
 2. Nguyen et al., *VLADriveBench: Evaluating CoT-Action Relationship in VLA for Autonomous Driving*, arXiv 2606.12706 (2026-06). https://arxiv.org/abs/2606.12706
+
