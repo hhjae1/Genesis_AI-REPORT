@@ -14,7 +14,7 @@
 
 - 실사 변환은 효과 없음 (변환 영상 품질 영향은 확인 중)
 - 진짜 영상이 Genesis 재현보다 계획 오차 0.84 m 작음 (2.20 vs 3.04 m)
-- 재현 영상 closed-loop에서 커브에서 이유없는 정체 발생(실제 운전자는 45 km/h 유지). 다른 논문(CARLA)에서도 같은 현상
+- 재현 영상 closed-loop에서 커브에서 이유없는 정체 발생(실제 운전자는 45 km/h 유지). Alpamayo 자체의 문제 (Park & Shim [1], VLADriveBench [2])
 
 ---
 
@@ -156,8 +156,8 @@ open-loop 영상 (각 영상 왼쪽 Genesis 입력, 오른쪽 s2r 입력)
 |---|---|---|---|---|
 | 실제 클립 u자 | Genesis 재현 | 1 | 0.57 / 1.71 | 39.8 |
 
-- U자 커브 저속 구간(19~27 s)에서 Alpamayo 계획이 차로 중심에서 바깥(왼쪽)으로 0.6 → 1.2 m 벗어나고 차도 그대로 따라감: cte 최대 1.71 m, 차선 이탈 39.8 %
-- 앞이 빈 U자 커브에서 45 → 5 km/h 로 감속(184 m, 25.7 s), 정체로 27.6 s 재출발. 같은 구간 실제 운전자는 45 km/h 유지
+- U자 커브 저속 구간(19~27 s)에서 Alpamayo 계획이 차로 중심에서 바깥(왼쪽)으로 0.6 → 1.2 m 벗어남: cte 최대 1.71 m, 차선 이탈 39.8 %
+
 - 멈추기 직전 Alpamayo 는 앞이 비었는데도 "오른쪽 커브라 감속"(Adapt speed for the right curve)이라는 판단을 반복하며 계획 속도를 0 까지 낮춤 -> 2.3 절과 같은 Alpamayo 자체의 문제 (Park & Shim [1], VLADriveBench [2])
 
 [![](images_jw/thumb_v2_recon_cl.png)](https://github.com/user-attachments/assets/f6ad2c4f-2725-4d6a-916f-35b5af4c0220)
