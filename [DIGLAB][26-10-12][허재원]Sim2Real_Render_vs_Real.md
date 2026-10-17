@@ -95,9 +95,9 @@ open-loop 영상 (각 영상 왼쪽 Genesis 입력, 오른쪽 s2r 입력)
 
 - **cte 평균 기준 s2r 나쁨 3 / 좋음 2**, 차선 이탈 기준으로는 반대로 좋음 3 / 나쁨 2 -> closed-loop 에서는 입력 렌더에 따른 일관된 차이 없음
 - **실제 클립 도로는 2개 모두 cte 기준 s2r 나쁨**(+0.32, +0.69 m)
-- S자는 두 입력 모두 Alpamayo 계획 자체가 84~86 % 차로 밖을 향함 -> 렌더보다 Alpamayo 의 급커브 계획 문제
+- S자는 두 입력 모두 Alpamayo 계획 자체가 84~86 % 차로 밖을 향함
 - 두 입력 모두 앞이 비어도 이유 없이 감속·정지: 입력 렌더와 무관한 closed-loop에서 Alpamayo 자체의 문제 (Park & Shim [1], VLADriveBench [2])
-- open-loop 은 실사 변환 쪽이 나쁨 -> 2.1 그림의 생성 결함(건물 휨·번짐) 문제 -> 2.2절에서의 언급처럼 실험 진행 중.
+- open-loop 은 실사 변환 쪽이 나쁨 -> 2.2절에서의 언급처럼 실험 진행 중.
 
 <table>
 <tr><td align="center"><a href="https://github.com/user-attachments/assets/19e6951a-885f-4b6d-b751-b904f8fd0d47"><img src="images_jw/thumb_v2_CL_A1_S.png" width="420"></a><br>A 빈 도로 · S자</td><td align="center"><a href="https://github.com/user-attachments/assets/5461a4ad-c083-4fac-82be-0c4d709e0309"><img src="images_jw/thumb_v2_CL_A2_hs.png" width="420"></a><br>A 빈 도로 · 고속 S곡선</td></tr>
