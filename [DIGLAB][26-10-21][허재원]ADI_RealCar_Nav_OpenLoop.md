@@ -66,7 +66,7 @@
 
 ``` -> Alpamayo 는 카메라 4개(광각 앞·왼쪽·오른쪽 + 망원 앞)를 입력으로 받는데 우리는 그 중 망원을 쓰지 않고 광각 3개를 360 영상을 잘라 만들었고, 학습 데이터(미국)에 없는 서울 도심 주행이라는 점을 고려해야 함```
 
-[![](images_jw/thumb_adi_ol_nonav.jpg)](video_jw/adi_ol_nonav.mp4)
+[![](images_jw/thumb_adi_ol_nonav.jpg)](https://github.com/user-attachments/assets/74bfaba9-193c-4079-8cee-5512e5ce8c2d)
 
 ```빨강 = 정답, 굵은 파랑 = 6개 중 최선, 옅은 파랑 = 나머지 5개, 점 = 1 s 간격. 오른쪽 위 = 위에서 본 경로, 그 아래 = 속도(km/h)```
 
@@ -109,7 +109,7 @@
 | s047 | Turn right in 20m | 12 |
 
 
-[![](images_jw/thumb_adi_ol_nav_route.jpg)](video_jw/adi_ol_nav_route.mp4)
+[![](images_jw/thumb_adi_ol_nav_route.jpg)](https://github.com/user-attachments/assets/6eae48fb-655e-4159-a1e2-ab481ca1e680)
 
 | 구성 | minADE6 (m) | 경로 이탈 (m) |
 |---|---|---|
