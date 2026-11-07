@@ -1,0 +1,325 @@
+﻿시점,샘플,ADE 최소,최적,CoT 적합성,애매,생성 궤적,유형,CoT
+s000,0,,,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s000,1,,,오판,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s000,2,ADE 최소,,오판,애매,불일치,stop,Stop for the red traffic light ahead
+s000,3,,최적,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s000,4,,,적합,애매,불일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s000,5,,,오판,,일치,slow,"Slow down to create a gap for merging into the right lane after clearing the intersection, since lane changes inside the junction are unsafe and there is moving traffic in our right lane that we must merge into."
+s001,0,,,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s001,1,,,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s001,2,,,오판,,일치,gap,Create a usable gap for a right lane change because a car is stopped behind in our right lane blocking an immediate merge
+s001,3,ADE 최소,최적,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s001,4,,,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s001,5,,,오판,,일치,gap,Create a usable gap in the right lane because lane change is restricted in the intersection and a car is stopped behind in that lane
+s002,0,,,적합,,일치,gap,Create a usable gap because a car is alongside in the right lane blocking an immediate merge to the right
+s002,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s002,2,,,오판,애매,일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s002,3,,,적합,,일치,gap,Create a usable gap for a right lane merge because a car is alongside in the right lane blocking immediate merge and our lane is slowing ahead
+s002,4,,,적합,,일치,gap,"Create a gap for a lane change to the right because a car is traveling just ahead in our right lane, blocking an immediate merge; once it clears, we can move right to bypass slower vehicles ahead in our current lane and take advantage of open space."
+s002,5,ADE 최소,,적합,,일치,gap,"Maintain lane and wait for a gap to merge right because a car is alongside/just ahead in our right lane blocking an immediate merge; once it clears, we can tuck in behind it for our intended right-lane path."
+s003,0,,,적합,,일치,gap,Create a usable gap for a right lane change because a bus is alongside in the right lane blocking an immediate merge
+s003,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s003,2,,,적합,,일치,slow,"Slow down and hold lane because a blue bus is alongside in our right lane, blocking an immediate merge; wait for it to clear to create a safe gap for a right-lane change."
+s003,3,,,오판,,일치,slow,"Decelerate and hold lane because a bus is traveling alongside in our right lane, blocking an immediate merge; create a usable gap to merge right, since our current left lane tapers/ends ahead after the bus passes."
+s003,4,ADE 최소,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s003,5,,,오판,애매,일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s004,0,,,적합,애매,불일치,keep_speed,Keep speed through the intersection since the traffic light is green
+s004,1,,,확인 불가,,일치,gap,Create a usable gap for a right lane change because a slower car is behind in the right lane blocking an immediate merge
+s004,2,,,적합,애매,불일치,keep_speed,Keep speed through the intersection since the traffic light is green
+s004,3,ADE 최소,,적합,애매,불일치,accel,Accelerate to proceed through the intersection since the straight traffic light is green
+s004,4,,,확인 불가,,일치,gap,Create a usable gap for a right lane change because a car is behind in our right lane blocking an immediate merge
+s004,5,,,적합,애매,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s005,0,,,적합,,불일치,keep_lane,Keep lane since the lane is clear ahead
+s005,1,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s005,2,ADE 최소,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s005,3,,,적합,,불일치,keep_lane,Keep lane since the lane is clear ahead
+s005,4,,,적합,,불일치,keep_lane,Keep lane since the lane is clear ahead
+s005,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s006,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s006,1,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s006,2,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s006,3,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s006,4,,,오판,,불일치,turn_slow,Adapt speed for the right curve since lane markings indicate a right split ahead
+s006,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s007,0,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s007,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s007,2,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s007,3,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s007,4,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s007,5,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s008,0,,,오판,,일치,slow,Slow down to create a gap for merging right because a car is coming up in our right lane and blocks our intended merge space; we must yield and match its speed before moving right.
+s008,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s008,2,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s008,3,,,오판,,불일치,slow,Slow down and hold lane to create a gap for a right-lane merge because a car is coming up in our right lane and blocks an immediate merge while our lane is slowing with a lead vehicle/bus ahead.
+s008,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s008,5,,,확인 불가,,불일치,gap,Wait for a gap because a car is coming from behind in the right lane blocking an immediate merge to the right
+s009,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s009,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s009,2,ADE 최소,,적합,,일치,slow,"Slow down and hold lane because a car is coming up in our right lane, blocking an immediate merge to the right, while our lead vehicle is slowing ahead, requiring us to maintain a safe gap."
+s009,3,,,확인 불가,,불일치,gap,Wait for a gap because a car is coming from the right rear in our lane blocking an immediate merge to the right
+s009,4,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s009,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s010,0,,,적합,,일치,follow,Adapt speed to maintain a safe distance from the lead vehicle since it is directly ahead in our lane
+s010,1,,,적합,,일치,gap,Create a usable gap in the right lane because a car is alongside blocking an immediate merge and our lane is slowing ahead
+s010,2,,,적합,,일치,gap,Create a usable gap because a car is alongside in our right lane blocking an immediate merge to the right
+s010,3,ADE 최소,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s010,4,,,오판,,일치,accel,Accelerate to create a usable gap for a right-lane merge because a car is alongside in our right lane blocking an immediate merge; clear this vehicle first so we can tuck in behind it for our intended right-lane position for the upcoming exit.
+s010,5,,,적합,,일치,gap,Create a usable gap because vehicles alongside in the right lane block an immediate merge to the right
+s011,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s011,1,,,확인 불가,,일치,gap,Create a usable gap for a right lane change because a car is behind in that lane and blocking an immediate merge
+s011,2,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s011,3,,,확인 불가,,일치,accel,"Accelerate to create a gap for a right-lane merge, since our current lane is impeded by a slow bus/queued cars ahead and a clear right lane opens up after our front-right vehicle passes, requiring us to match its speed to merge safely behind it."
+s011,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s011,5,,,적합,애매,불일치,gap,"Maintain lane and wait for a gap to merge left because a car is alongside in our left lane blocking an immediate merge while our current right lane bends/merges ahead, so we need space before initiating the left lane change."
+s012,0,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s012,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s012,2,,,확인 불가,,일치,gap,Create a usable gap for a right lane change because a car is behind in our right lane blocking an immediate merge
+s012,3,,,확인 불가,,일치,gap,Create a usable gap to move into the right lane because a car is behind in that lane blocking an immediate merge
+s012,4,,,확인 불가,,일치,gap,Create a usable gap for a right lane change because a car is behind in our right lane blocking an immediate merge
+s012,5,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s013,0,,,적합,애매,일치,gap,"Maintain lane and wait for a gap to merge left because a car is alongside/just ahead in our left lane blocking our merge while our current right lane tapers/ends ahead, so we must let it clear first."
+s013,1,,,적합,애매,일치,gap,"Maintain lane and wait for a gap for a left-lane merge because a car is currently alongside in our left lane blocking an immediate merge, and our lane has slower vehicles ahead that we plan to pass once space opens."
+s013,2,ADE 최소,,적합,,일부,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s013,3,,,확인 불가,,불일치,gap,Wait for a gap because a car is coming from behind in our right lane blocking an immediate merge to the right
+s013,4,,,적합,애매,일치,accel,"Accelerate to match the right‑lane traffic after clearing the intersection, since vehicles are already moving in our lane and we need to merge smoothly with them; maintain a safe following gap as our right‑lane car is moving slowly ahead after our turn is completed."
+s013,5,,,적합,,불일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s014,0,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s014,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s014,2,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s014,3,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s014,4,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s014,5,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s015,0,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s015,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s015,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s015,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s015,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s015,5,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s016,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s016,1,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s016,2,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s016,3,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s016,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s016,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s017,0,,,오판,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s017,1,,,적합,,일치,nudge_L,Nudge left due to the stopped vehicle blocking the right side of our lane
+s017,2,,,적합,,일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s017,3,,,오판,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s017,4,ADE 최소,최적,적합,,일부,nudge_L,Nudge left due to the stopped vehicle blocking the right side of our lane
+s017,5,,,오판,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s018,0,ADE 최소,,오판,애매,불일치,nudge_L,Nudge to the left to increase clearance from the stopped bus in our lane
+s018,1,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s018,2,,,적합,,일치,gap,Create a usable gap for a right lane change because a bus is alongside blocking entry into the right lane
+s018,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s018,4,,,적합,애매,일치,nudge_L,Nudge to the left to increase clearance from the stopped bus encroaching into our lane
+s018,5,,,적합,,일치,gap,Create a usable gap for a right-lane merge because a bus is alongside blocking an immediate merge and a truck is stopped behind in that lane
+s019,0,,,오판,,불일치,nudge_R,Nudge right due to the car encroaching from the left into our lane
+s019,1,,,오판,,일치,nudge_L,Nudge left due to cones blocking the right side of our lane
+s019,2,,,오판,,일부,nudge_L,Nudge left due to cones blocking the right side of our lane
+s019,3,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s019,4,,,오판,,불일치,nudge_L,Nudge left due to cones blocking the right side of our lane
+s019,5,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s020,0,ADE 최소,,적합,애매,불일치,nudge_R,Nudge right to increase clearance to the car encroaching from the left lane
+s020,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s020,2,,,적합,애매,불일치,nudge_R,Nudge right due to the sedan encroaching from the left lane
+s020,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s020,4,,,오판,,일치,nudge_L,Nudge left due to the stopped vehicle blocking the right side of our lane
+s020,5,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s021,0,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s021,1,,,오판,,일치,nudge_L,Nudge left due to cones blocking the right side of our lane
+s021,2,,,오판,,일치,nudge_L,Nudge left to avoid the cones blocking the right side of our lane
+s021,3,,,적합,애매,불일치,nudge_R,Nudge right due to the stopped vehicle encroaching from the left
+s021,4,,,적합,애매,불일치,nudge_R,Nudge right due to a car merging from the left into our lane
+s021,5,,,오판,,일치,nudge_L,Nudge left due to cones blocking the right side of our lane
+s022,0,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s022,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s022,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s022,3,ADE 최소,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s022,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s022,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s023,0,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s023,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s023,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s023,3,,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s023,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s023,5,,,오판,,불일치,nudge_L,Nudge left due to the vehicle encroaching from the right side of our lane
+s024,0,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s024,1,ADE 최소,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s024,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s024,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s024,4,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s024,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s025,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s025,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s025,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s025,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s025,4,ADE 최소,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s025,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s026,0,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s026,1,,,적합,,일부,nudge_L,Nudge to the left to clear the stopped trucks blocking the right side of our lane
+s026,2,,,적합,애매,일치,gap,"Maintain lane and wait for a gap to merge left because our right lane narrows/ends ahead due to construction cones and parked trucks, with vehicles currently occupying the left lane beside us blocking an immediate merge."
+s026,3,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s026,4,,,오판,애매,불일치,accel,"Accelerate to match traffic for an upcoming merge into the right lane, since our current lane is slowing with a lead car and right‑lane vehicles are already moving, requiring us to slot in behind them after clearing the cone‑Additionally, roadwork trucks and workers on our right side make an immediate merge unsafe; so building speed creates a safe gap for a merge into our right‑lane flow after clearing the intersection."
+s026,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s027,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s027,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s027,2,ADE 최소,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s027,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s027,4,,,확인 불가,,일치,gap,Create a usable gap for a left lane change because a car is behind in our left lane blocking an immediate merge
+s027,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s028,0,,,오판,애매,일치,gap,Create a usable gap for a left lane change because a car is alongside in the left lane blocking an immediate merge
+s028,1,,,오판,애매,일치,gap,Wait for a gap because a car is alongside in the left lane blocking an immediate merge to the left
+s028,2,,최적,오판,애매,일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s028,3,,,오판,애매,일부,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s028,4,ADE 최소,,오판,애매,불일치,slow,"Slow down to create a gap for the white sedan merging from the left into our lane ahead, ensuring safe following distance as it moves into our path."
+s028,5,,,오판,애매,불일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s029,0,,,적합,애매,일치,slow,"Slow down to create a gap for the car merging from the left into our lane ahead, ensuring safe following distance as it moves into our path."
+s029,1,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s029,2,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s029,3,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s029,4,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s029,5,,,오판,애매,일치,slow,"Slow down to create a gap for merging left because our right lane narrows/ends ahead due to construction, with cars already occupying the left lane that we must merge into."
+s030,0,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s030,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s030,2,,,적합,,일치,gap,Create a usable gap because a car is alongside in the left lane blocking an immediate merge to the left
+s030,3,,,적합,애매,일부,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s030,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s030,5,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s031,0,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s031,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s031,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s031,3,ADE 최소,,오판,애매,불일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s031,4,,,오판,애매,불일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s031,5,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s032,0,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s032,1,,,적합,,불일치,gap,Create a usable gap for a left lane change because a car is alongside in the left lane blocking an immediate merge
+s032,2,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s032,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s032,4,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s032,5,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s033,0,,,오판,애매,일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s033,1,,,적합,,불일치,accel,"Accelerate to match traffic flow because our lane is clear ahead, with only a distant lead vehicle and adjacent cars in other lanes that do not block our path; pedestrians remain off our lane, so no immediate slowing is required."
+s033,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s033,3,,,확인 불가,,일치,gap,Wait for a gap because a car is coming from behind in the left lane blocking an immediate merge to the left
+s033,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s033,5,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s034,0,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s034,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s034,2,,,오판,,일치,gap,Create a usable gap to merge into the right lane because a car is alongside in that lane blocking an immediate merge
+s034,3,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s034,4,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s034,5,,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s035,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s035,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s035,2,,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s035,3,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s035,4,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s035,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s036,0,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s036,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s036,2,,최적,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s036,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s036,4,ADE 최소,,오판,,일치,slow,"Slow down to create a gap for merging left because our current right lane tapers into a curbside/parking area and vehicles alongside in our left lane block an immediate merge, with pedestrians walking along the right sidewalk making staying right unsafe."
+s036,5,,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s037,0,,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s037,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s037,2,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s037,3,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s037,4,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s037,5,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s038,0,,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s038,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s038,2,ADE 최소,,적합,,일치,gap,Create a usable gap to merge left because vehicles alongside in the left lane block an immediate merge and our lane is slow behind a lead car
+s038,3,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s038,4,,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s038,5,,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s039,0,,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s039,1,,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s039,2,,,적합,,일부,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s039,3,,,적합,,일부,follow,Adapt speed to maintain a safe distance from the lead vehicle since it is moving slowly ahead
+s039,4,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is moving slowly ahead
+s039,5,,,오판,,불일치,accel,"Accelerate to match the right‑lane traffic in preparation for merging right, since our current lane is ending/merging right with cars already in that lane ahead and alongside blocking an immediate merge gap."
+s040,0,ADE 최소,,적합,,일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s040,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is slowing ahead
+s040,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s040,3,,,오판,애매,일치,slow,Yield to the cut-in vehicle from the left since it merges into our lane ahead
+s040,4,,최적,적합,,불일치,follow,Keep distance to the lead vehicle since it is slowing ahead
+s040,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s041,0,ADE 최소,,적합,,일부,turn_slow,Slow down due to the upcoming right curve
+s041,1,,,적합,애매,일치,turn,Turn right at the intersection since the right-turn traffic light is green
+s041,2,,,오판,애매,불일치,slow,Slow down due to pedestrians in the crosswalk ahead
+s041,3,,,오판,,일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s041,4,,최적,적합,,일치,turn_slow,Slow down to turn right at the intersection
+s041,5,,,적합,,불일치,turn,Turn right at the intersection since the right-turn traffic light is green
+s042,0,ADE 최소,,오판,,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s042,1,,최적,오판,,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s042,2,,,오판,,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s042,3,,,오판,,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s042,4,,,오판,,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s042,5,,,오판,,일치,accel,Accelerate to proceed through the intersection since the straight traffic light turns green
+s043,0,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s043,1,ADE 최소,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s043,2,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s043,3,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s043,4,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s043,5,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s044,0,,,확인 불가,,일치,gap,Create a usable gap for a left lane change because a car is behind in our left lane and is too close for an immediate merge
+s044,1,,,오판,,일치,gap,"Maintain lane and wait for a safe gap to merge left because a car is coming up in our left adjacent lane, blocking an immediate merge, while our right lane narrows/ends ahead due to construction barriers visible later in our path."
+s044,2,,,오판,,불일치,gap,"Maintain lane and wait for a gap to merge left because a car is currently alongside in the left lane, blocking an immediate merge while our current right lane narrows/ends ahead for parked vehicles."
+s044,3,,,오판,,일치,gap,"Maintain lane and wait for a gap to merge left because a car is currently alongside in our left lane, blocking an immediate merge; once it passes, our leftward trajectory and increasing leftward lateral speed indicate we will merge left soon after"
+s044,4,,,오판,,불일치,gap,"Maintain lane and wait for a gap to merge left because a car is currently alongside in our left lane blocking an immediate merge; once it passes, we can move left as our lane narrows/ends ahead due to parked cars and construction barriers"
+s044,5,ADE 최소,,오판,,일치,gap,"Maintain lane and wait for a gap to merge left because a car is currently alongside in our left adjacent lane, blocking an immediate merge while our lane narrows/ends ahead after the bus stop island and trees, so we must match left-lane traffic before moving over."
+s045,0,,,오판,,일치,stop,Stop to yield to the pedestrians in the crosswalk ahead since they are crossing our lane
+s045,1,ADE 최소,최적,오판,,일치,slow,Yield to the pedestrian since they are walking across our lane at the crosswalk ahead
+s045,2,,,오판,,불일치,nudge_L,Nudge left due to pedestrians walking across from the right
+s045,3,,,오판,,불일치,slow,Slow down due to pedestrians in the crosswalk ahead
+s045,4,,,적합,애매,불일치,slow,Yield to the pedestrians since they are crossing at the crosswalk ahead
+s045,5,,,적합,,불일치,nudge_L,Nudge left due to pedestrians walking across the right crosswalk
+s046,0,,최적,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s046,1,,,오판,애매,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s046,2,,,적합,,일치,keep_lane,Keep lane since the lane is clear ahead
+s046,3,,,적합,,불일치,keep_lane,Keep lane since the lane is clear ahead
+s046,4,,,오판,애매,불일치,follow,Keep distance to the cut-in vehicle since it merges into our lane ahead
+s046,5,ADE 최소,,적합,,불일치,keep_lane,Keep lane since the lane is clear ahead
+s047,0,,,오판,애매,불일치,gap,Wait for a gap because a car is coming from behind in the left lane blocking an immediate merge to the left
+s047,1,,,오판,애매,불일치,gap,Wait for a gap because a car is coming from behind in our left lane blocking an immediate merge to the left
+s047,2,,,오판,애매,불일치,gap,Wait for a gap because a car is coming from behind in the left lane blocking an immediate merge to the left
+s047,3,ADE 최소,최적,오판,,불일치,slow,"Slow down to create a gap for merging left, since our current right lane tapers/ends ahead and cars are occupying the left lane beside us, preventing an immediate merge"
+s047,4,,,오판,,불일치,gap,Wait for a gap because vehicles in the left lane are alongside blocking an immediate merge to the left
+s047,5,,,오판,애매,불일치,gap,Wait for a gap because a car is coming from behind in the left lane blocking an immediate merge to the left
+s048,0,,,확인 불가,,일치,accel,Resume speed since the cut-in vehicle has cleared our lane
+s048,1,,,확인 불가,,일치,accel,Resume speed since the cut-in vehicle has cleared ahead
+s048,2,,,확인 불가,,일치,accel,Resume speed since the cut-in vehicle has cleared
+s048,3,ADE 최소,,확인 불가,,일치,accel,Resume speed since the cut-in vehicle has cleared our lane
+s048,4,,,확인 불가,,일치,accel,Resume speed since the cut-in vehicle has cleared our lane
+s048,5,,,확인 불가,,일치,accel,Resume speed since the cut-in vehicle has cleared our lane
+s049,0,,,적합,애매,불일치,slow,Yield to the pedestrian since they are walking into our lane ahead
+s049,1,ADE 최소,최적,적합,,불일치,slow,Yield to the pedestrian since they are walking into our lane ahead
+s049,2,,,오판,,불일치,slow,Slow down due to a speed bump ahead
+s049,3,,,오판,애매,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s049,4,,,적합,애매,불일치,slow,Yield to the pedestrian since they are walking in our lane ahead
+s049,5,,,오판,애매,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s050,0,,,적합,애매,불일치,nudge_L,Nudge left due to pedestrians walking close to the right edge of our lane
+s050,1,,,적합,,일치,nudge_R,Nudge right to increase clearance to the stopped van ahead
+s050,2,,,오판,,일치,nudge_L,Nudge to the left to clear the stopped truck blocking the right side of our lane
+s050,3,,,적합,,불일치,nudge_R,Nudge right due to the stopped van blocking the left side of our lane
+s050,4,,,적합,,일부,nudge_R,Nudge right due to the stopped vehicle blocking the left side of our lane
+s050,5,ADE 최소,,적합,,일부,nudge_R,Nudge right due to the stopped van blocking the left side of our lane
+s051,0,,,적합,,일치,accel,Accelerate to proceed since the pedestrian has cleared the crosswalk ahead
+s051,1,,,적합,,불일치,nudge_R,Nudge to the right to clear the stopped truck blocking the lane
+s051,2,,,오판,,불일치,slow,Yield to the cut-in vehicle from the left since it merges into our lane ahead
+s051,3,ADE 최소,,적합,,일부,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s051,4,,,적합,,일치,accel,Resume speed since the pedestrian has cleared the crosswalk ahead
+s051,5,,,적합,,일치,accel,Accelerate to proceed through the intersection since the crosswalk is clear of pedestrians
+s052,0,,,적합,,일부,nudge_R,Nudge to the right to clear the stopped vehicle blocking the left side of our lane
+s052,1,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s052,2,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s052,3,,,오판,,불일치,nudge_L,Nudge to the left to clear the stopped vehicle blocking the right side of our lane
+s052,4,ADE 최소,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s052,5,,,적합,,불일치,follow,Keep distance to the lead vehicle since it is directly ahead in our lane
+s053,0,,,적합,,일치,nudge_R,Nudge right due to the stopped truck blocking the left side of our lane
+s053,1,,,오판,애매,불일치,nudge_R,Nudge right to increase clearance to the truck encroaching from the left
+s053,2,ADE 최소,최적,적합,,일치,nudge_R,Nudge to the right to clear the stopped truck blocking the left side of our lane
+s053,3,,,오판,애매,불일치,nudge_R,Nudge to the right to clear the stopped truck blocking the lane ahead
+s053,4,,,적합,,불일치,nudge_R,Nudge to the right to clear the stopped truck blocking the left side of our lane
+s053,5,,,오판,,일치,accel,Accelerate to clear the parked truck blocking the lane
