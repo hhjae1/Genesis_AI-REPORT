@@ -335,7 +335,7 @@
 - CoT 자체 오판: s047 내비는 우회전인데 왼쪽 합류 판단, s049-A 없는 과속방지턱, s028 옆 차로 흰 세단을 끼어드는 차로 판단(애매, 논문의 차로 배정 오류와 같은 유형)
 - 오판이 행동으로 이어짐: s036-B 근거 약한 왼쪽 합류를 생성 궤적이 그대로 실행
 
-### 4.3 관련 논문 (CoT ↔ 생성 궤적 불일치): [NeurIPS 2026] Say the Same, Act Differently
+### 4.3 관련 논문 (같은 CoT, 다른 생성 궤적): [NeurIPS 2026] Say the Same, Act Differently
 
 | 항목 |  |
 |---|---|
@@ -343,11 +343,12 @@
 | 제목 | Say the Same, Act Differently: Text-Orthogonal Action Subspaces in Reasoning Vision-Language-Action Models ([arXiv 2611.04166](https://arxiv.org/abs/2611.04166), arXiv 판 부제는 Diagnosing and Steering Text-Action Divergence in Reasoning VLAs) |
 | 소속 | University of Southern California, University of Arizona, General Motors |
 | 대상 | 운전: Alpamayo 1.5 (PhysicalAI-AV 1,181 클립, 그중 200 클립 실험) / 로봇팔: InstructVLA (200개) |
+| 측정 범위 | 영상 변형 전후의 CoT·생성 궤적 비교. CoT 가 입력 장면과 맞는지는 측정 안 함 (4.2 TRUST 와 다른 문제) |
 
 **핵심 질문:** CoT 가 그대로인데 생성 궤적만 위험하게 바뀔 수 있는가 -> 그렇다면 CoT 만 읽어서는 위험을 잡을 수 없음
 
 **원인:** CoT 와 생성 궤적은 같은 hidden state 에서 나옴. hidden state 가 바뀌어도 CoT 는 단어 출력(discrete)이라 그대로일 수 있지만, 생성 궤적은 좌표 출력(continuous)이라 같이 바뀜  
-```-> hidden state 가 미세하게 바뀌면 CoT 는 그대로여도 생성 궤적은 달라질 수 있음. 따라서 같은 CoT 에서도 CoT ↔ 생성 궤적 불일치가 발생할 수 있음```
+```-> hidden state 가 미세하게 바뀌면 CoT 는 그대로여도 생성 궤적은 달라질 수 있음. 따라서 같은 CoT 에서 서로 다른 생성 궤적이 나올 수 있음```
 
 | 실험 | 결과 |
 |---|---|
@@ -361,8 +362,8 @@
 **결론:** CoT 가 안 바뀌었다고 행동이 안전하다는 보장은 없음 -> 감시 시 생성 궤적을 직접 확인해야 함
 
 **우리 결과와 연결**
-- CoT 와 생성 궤적 불일치: s049 "양보"인데 33 km/h 까지 가속, s036-A "간격 유지"인데 45 km/h
-- 같은 CoT, 다른 생성 궤적: s017-B·C와 같은 경우
+- 같은 CoT, 다른 생성 궤적 (논문과 같은 현상): s017-B·C와 같은 경우
+- CoT 와 다른 생성 궤적: s049 "양보"인데 33 km/h 까지 가속, s036-A "간격 유지"인데 45 km/h -> 논문은 이 경우를 직접 측정하지 않음. 같은 CoT 에 여러 생성 궤적이 대응한다는 논문 결과로 설명 가능한 정도
 
 ---
 
