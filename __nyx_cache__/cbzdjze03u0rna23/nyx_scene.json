@@ -1,0 +1,86 @@
+{
+    "version": 1,
+    "asset_root_path": "../../",
+    "instance_array": [],
+    "camera_array": [
+        {
+            "uuid": 18446744073709551615,
+            "position": [
+                0.0,
+                1.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                -1.0,
+                0.0,
+                0.0
+            ],
+            "resolution": [
+                1440,
+                1440
+            ],
+            "near_plane": 0.10000000149011612,
+            "far_plane": 2000.0,
+            "spp": 16,
+            "denoise": false,
+            "anti_aliasing": "none",
+            "camera_profile": "C:/nyx146/work/out/srv058e2_profile_0.json"
+        },
+        {
+            "uuid": 18446744073709551615,
+            "position": [
+                0.0,
+                1.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                -1.0,
+                0.0,
+                0.0
+            ],
+            "resolution": [
+                1440,
+                1440
+            ],
+            "near_plane": 0.10000000149011612,
+            "far_plane": 2000.0,
+            "spp": 16,
+            "denoise": false,
+            "anti_aliasing": "none",
+            "camera_profile": "C:/nyx146/work/out/srv058e2_profile_1.json"
+        }
+    ],
+    "light_array": [],
+    "environment_map_array": [],
+    "animation_array": [],
+    "light_field_array": [
+        {
+            "uuid": 18446744073709551615,
+            "type": "gaussian_field",
+            "uri": "C:/nyx146/data/pai_route_dx_norest.ply",
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "tint": [
+                0.9700000286102295,
+                0.9700000286102295,
+                0.9700000286102295
+            ]
+        }
+    ]
+}
