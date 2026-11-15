@@ -4,7 +4,6 @@
 
 | 항목 |  |
 |---|---|
-| 지난 보고 | 10 Hz 재계획에서 **주행 초반에 차가 오른쪽으로 틀어짐** -> AlpaSim 처럼 MPC 제어기를 적용해 처음부터 10 Hz 로 주행하는 실험 진행, 결과가 좋으면 기존 nominal 제어기에 MPC 기능을 적용해 실험할 계획 |
 | 이번 | nominal 에 AlpaSim MPC 기능 적용 -> nominal vs nominal + MPC closed-loop 결과 |
 | 맵 | PhysicalAI-AV 클립 058bf960 (샌프란시스코) 2DGS 맵 + 노면 메시, 경로 133.2 m (직진 후 교차로 좌회전) |
 | 모델 | Alpamayo 2 Edge (2B), 0.1 s 마다 재계획 (10 Hz), 시드 42 |
