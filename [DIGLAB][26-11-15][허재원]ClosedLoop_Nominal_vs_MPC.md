@@ -47,11 +47,11 @@ flowchart LR
 
 | 제어기 | 주행 영상 (클릭) | 경로 (속도색) |
 |---|---|---|
-| nominal | <a href=video_jw/cl058_nominal.mp4><img src="images_jw/thumb_cl058_nominal.jpg" width="360"></a> | <img src="images_jw/cl058_path_cl058e2finalv5_sdk_s42.png" width="300"> |
-| nominal + MPC | <a href=video_jw/cl058_nominal_mpc.mp4><img src="images_jw/thumb_cl058_nominal_mpc.jpg" width="360"></a> | <img src="images_jw/cl058_path_cl058e2finalv6_mpc_s42.png" width="300"> |
+| nominal | <a href="https://github.com/user-attachments/assets/6bb15318-510b-4419-8549-f51b2aa2e557"><img src="images_jw/thumb_cl058_nominal.jpg" width="360"></a> | <img src="images_jw/cl058_path_cl058e2finalv5_sdk_s42.png" width="300"> |
+| nominal + MPC | <a href="https://github.com/user-attachments/assets/e9be164d-397b-4a4f-ad7a-f2f515ed3b59"><img src="images_jw/thumb_cl058_nominal_mpc.jpg" width="360"></a> | <img src="images_jw/cl058_path_cl058e2finalv6_mpc_s42.png" width="300"> |
 
 - 6.5 s: nominal 은 오른쪽 주차 SUV 에 충돌, nominal + MPC 는 차로 가운데  
- : 같은 시각 CoT 는 둘 다 `Slow down and turn left at the intersection to the traffic signal follow our route, as is green`
+ : 같은 시각 CoT 는 둘 다 `Slow down and turn left at the intersection to follow our route, as the traffic signal is green`
 - 같은 판단을 받아도 계획 앞부분을 그대로 따라가면 오른쪽으로 밀림 -> 제어기 쪽 문제
 
 - nominal + MPC 의 107 m 지점 정지 구간 (21.5 ~ 25.5 s). 앞 오른쪽 연석에 **렌더가 깨진 반투명 물체**(2DGS 에 제대로 복원 안 된 물체, 바닥에 빨간 번짐)
